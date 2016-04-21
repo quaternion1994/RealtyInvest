@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@using RealtyInvest.Web
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>RealtyInvest - Панель администрирования</title>
+    <link href="~/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    <style>
+        #feedback {
+            font-size: 1.4em;
+        }
+        #restatelist {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 20%;
+        }
+            #restatelist li {
+                margin: 3px;
+                padding: 0.4em;
+                font-size: 1.4em;
+                height: 18px;
+            }
+            #restatelist li:hover {
+                background: #FECA40;
+            }
+                #restatelist li.selected {
+                    background: #F39814;
+                    color: white;
+                }
+    </style>
+</head>
+
+    <body>
+    <h1>Панель администрирования</h1>
+
+    </body>
+</html>
+

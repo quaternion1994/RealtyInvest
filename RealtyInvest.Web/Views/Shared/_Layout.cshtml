@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="RealtyInvest.App">
+<head>
+    <meta charset="utf-8" />
+    <title>RealtyInvest - @ViewBag.Title</title>
+    <link href="~/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/bootstrap")
+
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/uobtrusivejs")
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/angular-ui")
+    @RenderSection("styles", required: false)
+</head>
+<body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="@Url.Action("Index", "Home")">RealtyInvest</a>
+                </div>
+                <div id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="@Url.Action("Realty", "Home")">Недвижимость</a></li>
+                        <li><a href="@Url.Action("About", "Home")">Как это работает?</a></li>
+                        <li><a href="@Url.Action("Contact", "Home")">Контакты</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right" ng-controller="LoginCtrl">
+                        @Html.Partial("_LoginPartial")
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container" id="body">
+                @RenderSection("featured", required: false)
+                @RenderBody()
+        </div>
+        <footer class="footer">
+            <div class="container">
+                2013 - 2014 | <a href="http://www.qbit-studio.com">www.qbit-studio.com</a>
+            </div>
+        </footer>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

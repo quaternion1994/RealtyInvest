@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealtyInvest.DataModel", "RealtyInvest.DataModel\RealtyInvest.DataModel.csproj", "{650FF573-E89B-45DF-8979-386AC610C0FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{9AEDB14F-B697-4D05-8A95-1358D8CB4BC2}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "RealtyInvestModel", "RealtyInvestModel\RealtyInvestModel.modelproj", "{BA4D91FC-0C65-45C2-890A-1C026FC90016}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealtyInvest.Web", "RealtyInvest.Web\RealtyInvest.Web.csproj", "{35477E40-B85B-48AA-A0DF-8382C4C674F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealtyInvest.Common", "RealtyInvest.Common\RealtyInvest.Common.csproj", "{746ADDD4-FFB3-4436-A0A2-16E20A8E7E93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealtyInvest.Core", "RealtyInvest.Core\RealtyInvest.Core.csproj", "{29911504-3AD9-432C-BBA9-84918FBBB15A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{650FF573-E89B-45DF-8979-386AC610C0FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{650FF573-E89B-45DF-8979-386AC610C0FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{650FF573-E89B-45DF-8979-386AC610C0FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{650FF573-E89B-45DF-8979-386AC610C0FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA4D91FC-0C65-45C2-890A-1C026FC90016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA4D91FC-0C65-45C2-890A-1C026FC90016}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA4D91FC-0C65-45C2-890A-1C026FC90016}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA4D91FC-0C65-45C2-890A-1C026FC90016}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35477E40-B85B-48AA-A0DF-8382C4C674F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35477E40-B85B-48AA-A0DF-8382C4C674F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35477E40-B85B-48AA-A0DF-8382C4C674F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35477E40-B85B-48AA-A0DF-8382C4C674F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{746ADDD4-FFB3-4436-A0A2-16E20A8E7E93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{746ADDD4-FFB3-4436-A0A2-16E20A8E7E93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{746ADDD4-FFB3-4436-A0A2-16E20A8E7E93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{746ADDD4-FFB3-4436-A0A2-16E20A8E7E93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29911504-3AD9-432C-BBA9-84918FBBB15A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29911504-3AD9-432C-BBA9-84918FBBB15A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29911504-3AD9-432C-BBA9-84918FBBB15A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29911504-3AD9-432C-BBA9-84918FBBB15A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

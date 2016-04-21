@@ -1,0 +1,40 @@
+﻿@using Microsoft.AspNet.Identity
+
+<script type="text/ng-template" id="templateLoginDlg.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Login</h3>
+    </div>
+    <div id="loginContext">
+        @Html.Action("Login", "Account")
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="login()">OK</button>
+        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+</script>
+<script type="text/ng-template" id="templateRegistrationDlg.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Registration</h3>
+    </div>
+    <div id="registerContext">
+        @Html.Action("Register", "Account")
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+</script>
+
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new {id = "logoutForm", @class = "nav navbar-nav navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+        <li class="navbar-link"><a href="@Url.Action("Index", "Manage")">Здравствуйте, @User.Identity.GetUserName()</a></li>
+        <li class="navbar-link"><a href="javascript:document.getElementById('logoutForm').submit()">Выйти</a></li>
+    }
+}
+else
+{
+    <li><a href="#" ng-click="openRegistration('lg')">Регистрация</a></li>
+    <li><a href="#" ng-click="openLogin('lg')">Выполнить вход</a></li>
+}
