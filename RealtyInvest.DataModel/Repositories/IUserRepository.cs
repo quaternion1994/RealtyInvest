@@ -1,10 +1,11 @@
-﻿using Latitude.Common.DependencyInjection.Models;
-using Latitude.DataAccess.Entities;
+﻿using Microsoft.AspNet.Identity;
+using RealtyInvest.DataModel.Entites;
+using RealtyInvest.DataModel.Impl;
 
-namespace Latitude.DataAccess.Repositories
+namespace RealtyInvest.DataModel.Repositories
 {
-    public interface IUserRepository : IRepository<User, int>, IDependency
+    public interface IUserRepository : IRepository<RealtyInvestUser, string>
     {
-        User GetByEmail(string email);
+        UserManager<RealtyInvestUser> UserManager { get;  }
     }
 }

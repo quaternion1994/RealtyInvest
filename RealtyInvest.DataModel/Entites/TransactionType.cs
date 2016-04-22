@@ -1,4 +1,4 @@
-namespace RealtyInvest.DataModel
+namespace RealtyInvest.DataModel.Entites
 {
     public enum TransactionType : byte
     {

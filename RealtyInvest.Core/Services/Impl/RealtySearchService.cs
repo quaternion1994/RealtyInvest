@@ -1,5 +1,4 @@
-﻿using System;
-using RealtyInvest.Common.ServiceResult;
+﻿using RealtyInvest.Common.ServiceResult;
 using RealtyInvest.DataModel.Models;
 using RealtyInvest.DataModel.UnitsOfWorks;
 

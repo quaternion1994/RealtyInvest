@@ -4,7 +4,9 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
-using RealtyInvest.Web.Models;
+using RealtyInvest.DataModel;
+using RealtyInvest.DataModel.Entites;
+using RealtyInvest.DataModel.ViewModels;
 
 namespace RealtyInvest.Web.Controllers
 {
@@ -12,16 +14,17 @@ namespace RealtyInvest.Web.Controllers
     public class AccountController : Controller
     {
         public AccountController()
-            : this(new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext())))
+            : this(new UserManager<RealtyInvestUser>(new UserStore<RealtyInvestUser>(new RealtyInvestDbContext())))
         {
+
         }
 
-        public AccountController(UserManager<ApplicationUser> userManager)
+        public AccountController(UserManager<RealtyInvestUser> userManager)
         {
             UserManager = userManager;
         }
 
-        public UserManager<ApplicationUser> UserManager { get; private set; }
+        public UserManager<RealtyInvestUser> UserManager { get; private set; }
 
         //
         // GET: /Account/Login
@@ -75,7 +78,7 @@ namespace RealtyInvest.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser() { UserName = model.UserName };
+                var user = new RealtyInvestUser() { UserName = model.UserName };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -263,7 +266,7 @@ namespace RealtyInvest.Web.Controllers
                 {
                     return View("ExternalLoginFailure");
                 }
-                var user = new ApplicationUser() { UserName = model.UserName };
+                var user = new RealtyInvestUser() { UserName = model.UserName };
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)
                 {
@@ -329,7 +332,7 @@ namespace RealtyInvest.Web.Controllers
             }
         }
 
-        private async Task SignInAsync(ApplicationUser user, bool isPersistent)
+        private async Task SignInAsync(RealtyInvestUser user, bool isPersistent)
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ExternalCookie);
             var identity = await UserManager.CreateIdentityAsync(user, DefaultAuthenticationTypes.ApplicationCookie);

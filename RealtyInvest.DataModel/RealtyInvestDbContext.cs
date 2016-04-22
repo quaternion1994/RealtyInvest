@@ -1,11 +1,12 @@
 ﻿using System.Data.Entity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using RealtyInvest.DataModel.Entites;
 
 namespace RealtyInvest.DataModel
 {
-    public class RealtyInvestDbContext : DbContext
+    public class RealtyInvestDbContext : IdentityDbContext<RealtyInvestUser>
     {
-        public RealtyInvestDbContext(): base("name=ModelContainer")
+        public RealtyInvestDbContext(): base("DefaultConnection")
         {
         }
     

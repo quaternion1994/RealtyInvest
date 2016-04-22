@@ -1,4 +1,6 @@
 ﻿using System;
+using RealtyInvest.DataModel.Impl;
+using RealtyInvest.DataModel.Repositories;
 
 namespace RealtyInvest.DataModel.UnitsOfWorks.Impl
 {
@@ -6,6 +8,7 @@ namespace RealtyInvest.DataModel.UnitsOfWorks.Impl
     {
         private bool _disposed;
         private readonly RealtyInvestDbContext _context;
+        private IUserRepository _userRepository;
 
         public UnitOfWork(RealtyInvestDbContext context)
         {
@@ -18,7 +21,7 @@ namespace RealtyInvest.DataModel.UnitsOfWorks.Impl
         ///// <summary>
         ///// Repository creation implementation
         ///// </summary>
-        //public IAccountRepository AccountRepository => _accountRepository ?? (_accountRepository = new AccountRepository(_context));
+        public IUserRepository UserRepository => _userRepository ?? (_userRepository = new UserRepository(_context));
 
   
         private void Save()

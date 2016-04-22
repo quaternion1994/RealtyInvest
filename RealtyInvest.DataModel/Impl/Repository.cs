@@ -8,7 +8,8 @@ namespace RealtyInvest.DataModel.Impl
 {
     public abstract class Repository<T, TKey> : IRepository<T, TKey> where T : class
     {
-        protected readonly RealtyInvestDbContext ContextDb;
+        protected RealtyInvestDbContext ContextDb { get; }
+    
         protected Repository(RealtyInvestDbContext contextDb)
         {
             ContextDb = contextDb;

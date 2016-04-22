@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace RealtyInvest.Web.Models
+namespace RealtyInvest.DataModel.ViewModels
 {
     public class ExternalLoginConfirmationViewModel
     {

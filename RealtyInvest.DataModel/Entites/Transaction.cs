@@ -1,11 +1,14 @@
 namespace RealtyInvest.DataModel.Entites
 {
-    public partial class Transaction
+    public class Transaction
     {
         public int Id { get; set; }
-        public string Volume { get; set; }
+        public decimal Volume { get; set; }
         public TransactionType Type { get; set; }
         public System.DateTime Date { get; set; }
+        public int InvestorId { get; set; }
+        public int OwnerId { get; set; }
+        public virtual Owner Owner { get; set; }
         public virtual Investor Investor { get; set; }
         public virtual RealEstate RealEstate { get; set; }
     }
