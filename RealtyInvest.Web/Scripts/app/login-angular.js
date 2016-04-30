@@ -1,39 +1,31 @@
 var app = angular.module('RealtyInvest.App', ['ui.bootstrap', 'ngAnimate']);
 
 app.controller('LoginCtrl', function ($scope, $uibModal,  $log) {
-    $scope.animationsEnabled = true;
-
-    $scope.openLogin = function (size) {
-
-        var modalInstance = $uibModal.open({
-            animation: $scope.animationsEnabled,
-            templateUrl: 'templateLoginDlg.html',
-            controller: 'LoginInstanceCtrl',
-            size: size
-        });
+    $scope.openLogin = function () {
+        $('#LoginDlg').modal();
     };
-    $scope.openRegistration = function (size) {
-        var modalInstance = $uibModal.open({
-            animation: $scope.animationsEnabled,
-            templateUrl: 'templateRegistrationDlg.html',
-            controller: 'LoginInstanceCtrl',
-            size: size
-        });
-    };
-    $scope.toggleAnimation = function () {
-        $scope.animationsEnabled = !$scope.animationsEnabled;
+    $scope.openRegistration = function () {
+        $('#RegisterDlg').modal();
     };
 });
 
-app.controller('LoginInstanceCtrl', function ($scope, $uibModalInstance, $log) {
-    $scope.animationsEnabled = true;
+app.controller('LoginInstanceCtrl', function ($scope, $log) {
 
     $scope.login = function () {
-       $('#loginForm').submit();
-        //$uibModalInstance.close($scope.selected.item);
+        $('#loginForm').submit();
     };
     
     $scope.cancel = function () {
-        $uibModalInstance.dismiss('cancel');
+        $('#LoginDlg').modal('hide');
+    };
+});
+app.controller('RegInstanceCtrl', function ($scope, $log) {
+
+    $scope.ok = function () {
+        $('#registrationForm').submit();
+    };
+    
+    $scope.cancel = function () {
+        $('#RegisterDlg').modal('hide');
     };
 });

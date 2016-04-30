@@ -29,10 +29,10 @@ namespace RealtyInvest.Web
         }
         private void AddBindings()
         {
-
             _kernel.Bind<IUnitOfWorkFactory>().To<UnitOfWorkFactory>();
             //Services
             _kernel.Bind<IRealtySearchService>().To<RealtySearchService>();
+            _kernel.Bind<IAuthService>().To<AuthService>();
         }
     }
 }

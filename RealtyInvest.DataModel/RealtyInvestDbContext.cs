@@ -12,7 +12,7 @@ namespace RealtyInvest.DataModel
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            
+            base.OnModelCreating(modelBuilder);
         }
     
         public virtual DbSet<RealEstate> RealEstateSet { get; set; }

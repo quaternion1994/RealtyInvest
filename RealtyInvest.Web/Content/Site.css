@@ -1,154 +1,37 @@
-﻿html {
-    background-color: #e2e2e2;
-    margin: 0;
-    padding: 0;
+﻿.realtyinvest {
+        padding-top: 70px;
 }
-
-body {
-    background-color: #fff;
-    border-top: solid 5px #000;
-    color: #333;
-    font-size: .85em;
-    font-family: "Segoe UI" , Verdana, Helvetica, Sans-Serif;
-    margin: 0;
-    padding: 0;
-    border-top-color: #FF6600;
+.search-box {
+        padding-bottom: 15px;
 }
-
-a {
-    color: #333;
-    outline: none;
-    padding-left: 3px;
-    padding-right: 3px;
-    text-decoration: underline;
+.footer {
+    background-color: black;
+    padding-bottom: 50px;
+    color: white;
 }
-
-header, footer, hgroup,
-nav, section {
-    display: block;
-}
-
-mark {
-    background-color: #a6dbed;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-.float-left {
-    float: left;
-}
-
-.float-right {
-    float: right;
-}
-
-.clear-fix:after {
-    content: ".";
-    clear: both;
-    display: block;
-    height: 0;
-    visibility: hidden;
-}
-
-h1, h2, h3,
-h4, h5, h6 {
-    color: #000;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-h1 {
-    font-size: 2em;
-}
-
-h2 {
-    font-size: 1.75em;
-}
-
-h3 {
-    font-size: 1.2em;
-}
-
-h4 {
-    font-size: 1.1em;
-}
-
-h5, h6 {
-    font-size: 1em;
-}
-
-h5 a:link, h5 a:visited, h5 a:active {
-        padding: 0;
+    .footer a {
+        color: #ff6a00;
         text-decoration: none;
-}
-
-.menuLink, .menuLink:visited {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.menuLink:hover, .menuLink:active {
-    color:#FF6600;
-}
-/* main layout
-----------------------------------------------------------*/
-#head{
-    background-color: #333333;
-    padding: 10px;
-    height: 100px;
-}
-.content-wrapper {
-    max-width: 960px;
-    min-width: 750px;
-    margin: 0 auto;
-}
-#logo {
-    margin: 20px 0;
-}
-.left-side {
-    float: left;
-}
-.right-side {
-    float:right;
-    text-align: right;
-}
-#menu {
-    list-style: none;
-    color: white;
-    margin-top:40px;
-}
-    #menu > li {
-        display: inline-block;
-        margin: 0px;
-        border-bottom-style: solid;
-        border-bottom-width: medium;
-        border-bottom-color: #333333;
-        padding: 10px;
-        margin: 0px;
     }
-    #menu a { 
-        text-decoration: none; 
-        color: #FFFFFF;          
+    .footer a:hover {
+        color: #ffd800;
+        text-decoration: none;
+    }
+    .footer a:visited {
+        color: #ffd800;
+        text-decoration: none;
+    }
+    .footer a:focus {
+        color: #ffd800;
+        text-decoration: none;
+    }
+    .footer .bold-text {
+        font-weight: bold;
+    }
+    .footer .bold-text {
+        font-weight: bold;
     }
 
-    #menu > li:hover {
-        display: inline-block;
-        border-bottom-color: #FF6600;
-        transition-property: border-bottom-color;
-        transition-timing-function:ease;
-        transition-delay: 0s;
-        transition-duration: 0.5s;
-        background-color: #808080;
-}
-#loginBox{
-    display: none;
-}
-#regBox{
-    display: none;
-}
-#footer {
-}
 .field-validation-error
 {
     color: #ff0000;

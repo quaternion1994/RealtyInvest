@@ -18,32 +18,77 @@
     @RenderSection("styles", required: false)
 </head>
 <body>
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="@Url.Action("Index", "Home")">RealtyInvest</a>
-                </div>
-                <div id="navbar">
-                    <ul class="nav navbar-nav">
-                        <li><a href="@Url.Action("Realty", "Home")">Недвижимость</a></li>
-                        <li><a href="@Url.Action("About", "Home")">Как это работает?</a></li>
-                        <li><a href="@Url.Action("Contact", "Home")">Контакты</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right" ng-controller="LoginCtrl">
-                        @Html.Partial("_LoginPartial")
-                    </ul>
-                </div>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container theme-showcase">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="@Url.Action("Index", "Home")">RealtyInvest</a>
             </div>
-        </nav>
-        <div class="container" id="body">
-                @RenderSection("featured", required: false)
-                @RenderBody()
+            <div id="navbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="@Url.Action("Realty", "Home")">Недвижимость</a></li>
+                    <li><a href="@Url.Action("About", "Home")">Как это работает?</a></li>
+                    <li><a href="@Url.Action("Contact", "Home")">Контакты</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" ng-controller="LoginCtrl">
+                    @Html.Partial("_LoginPartial")
+                </ul>
+            </div>
         </div>
-        <footer class="footer">
-            <div class="container">
-                2013 - 2014 | <a href="http://www.qbit-studio.com">www.qbit-studio.com</a>
+    </nav>
+    <div class="container realtyinvest">
+            @RenderSection("featured", required: false)
+            @RenderBody()
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="col-lg-4">
+                2013 - 2016 | <a href="http://www.qbit-studio.com">www.qbit-studio.com</a>
             </div>
-        </footer>
+            <div class="col-lg-6">
+                <span class="bold-text">Feedback</span>
+                <br>
+                <span>Developer</span><a class="row" href="http://www.qbit-studio.com">Vlad Petrenko</a>
+                <br>
+                <span>Web-site owner</span><a class="row" href="http://www.qbit-studio.com">Vlad Petrenko</a>
+            </div>
+        </div>
+    </footer>
+    <div class="modal fade" id="LoginDlg" role="dialog" ng-controller="LoginInstanceCtrl">
+        <div class="modal-dialog" style="width:70%">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Login</h3>
+                </div>
+                <div id="loginContext">
+                    @Html.Action("Login", "Account")
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="button" ng-click="login()">OK</button>
+                    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="RegisterDlg" role="dialog" ng-controller="RegInstanceCtrl">
+        <div class="modal-dialog" style="width:70%">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Registration</h3>
+                </div>
+                <div id="registerContext">
+                    @Html.Action("Register", "Account")
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="button" ng-click="ok()">Register</button>
+                    <button class="btn btn-primary" type="button" ng-click="cancel()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    @RenderSection("modals", required: false)
     @RenderSection("scripts", required: false)
 </body>
 </html>

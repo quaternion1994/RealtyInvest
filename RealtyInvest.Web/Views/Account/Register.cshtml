@@ -3,7 +3,7 @@
     Layout = null;
 }
 
-@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+@using (Ajax.BeginForm("Register", "Account", new AjaxOptions { UpdateTargetId = "registerContext", HttpMethod = "POST" }, new { @class = "form-horizontal", id = "registrationForm", role = "form" }))
 {
     @Html.AntiForgeryToken()
     <hr/>
@@ -24,11 +24,6 @@
         @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Регистрация" />
         </div>
     </div>
 }
