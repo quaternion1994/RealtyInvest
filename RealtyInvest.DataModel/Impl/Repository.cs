@@ -20,7 +20,7 @@ namespace RealtyInvest.DataModel.Impl
 
         public virtual T Find(Expression<Func<T, bool>> query)
         {
-            return ContextDb.Set<T>().SingleOrDefault<T>(query);
+            return ContextDb.Set<T>().FirstOrDefault<T>(query);
         }
 
         public virtual IQueryable<T> All()

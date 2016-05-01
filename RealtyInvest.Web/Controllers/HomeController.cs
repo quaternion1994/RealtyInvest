@@ -8,7 +8,10 @@ namespace RealtyInvest.Web.Controllers
         {
             return View();
         }
-
+        public ActionResult RealtyView(int? id)
+        {
+            return View();
+        }
         public ActionResult About()
         {
             return View();
@@ -17,6 +20,7 @@ namespace RealtyInvest.Web.Controllers
         {
             return View();
         }
+
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

@@ -3,7 +3,7 @@
     Layout = null;
 }
 
-@using (Ajax.BeginForm("Register", "Account", new AjaxOptions { UpdateTargetId = "registerContext", HttpMethod = "POST" }, new { @class = "form-horizontal", id = "registrationForm", role = "form" }))
+@using (Ajax.BeginForm("Register", "Account", new AjaxOptions { UpdateTargetId = "registerContext", OnSuccess = "angular.element(document.querySelector('#RegisterDlg')).scope().success(data)", HttpMethod = "POST" }, new { @class = "form-horizontal", id = "registrationForm", role = "form" }))
 {
     @Html.AntiForgeryToken()
     <hr/>

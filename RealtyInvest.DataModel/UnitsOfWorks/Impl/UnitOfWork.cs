@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Runtime.Remoting.Contexts;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using RealtyInvest.DataModel.Entites;
 using RealtyInvest.DataModel.Impl;
 using RealtyInvest.DataModel.Repositories;
 
@@ -8,22 +12,23 @@ namespace RealtyInvest.DataModel.UnitsOfWorks.Impl
     {
         private bool _disposed;
         private readonly RealtyInvestDbContext _context;
-        private IUserRepository _userRepository;
+    
+        private IRealEstateRepository _estateRepository;
+        private UserManager<RealtyInvestUser> _userManager;
+        private RoleManager<IdentityRole> _roleManager;
 
         public UnitOfWork(RealtyInvestDbContext context)
         {
             _context = context;
         }
 
-        //private IAccountRepository _accountRepository;
-
-
         ///// <summary>
         ///// Repository creation implementation
         ///// </summary>
-        public IUserRepository UserRepository => _userRepository ?? (_userRepository = new UserRepository(_context));
+        public IRealEstateRepository RealEstateRepository => _estateRepository ?? (_estateRepository = new RealEstateRepository(_context));
+        public UserManager<RealtyInvestUser> UserManager => _userManager ?? (_userManager = new UserManager<RealtyInvestUser>(new UserStore<RealtyInvestUser>(_context)));
+        public RoleManager<IdentityRole> RoleManager => _roleManager ?? (_roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(_context)));
 
-  
         private void Save()
         {
             _context.SaveChanges();

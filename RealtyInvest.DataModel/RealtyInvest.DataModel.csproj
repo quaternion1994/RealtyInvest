@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.2.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -75,6 +79,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -85,30 +90,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entites\Person.cs" />
     <Compile Include="Entites\RealtyInvestUser.cs" />
     <Compile Include="Entites\Resource.cs" />
     <Compile Include="Impl\Repository.cs" />
-    <Compile Include="Impl\RoleRepository.cs" />
-    <Compile Include="Impl\UserRepository.cs" />
     <Compile Include="Models\SearchModel.cs" />
     <Compile Include="Repositories\IRealEstateRepository.cs" />
     <Compile Include="Repositories\IRepository.cs" />
     <Compile Include="Entites\Coords.cs" />
-    <Compile Include="Entites\Investor.cs" />
     <Compile Include="RealtyInvestDbContext.cs" />
-    <Compile Include="Entites\Owner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entites\RealEstate.cs" />
     <Compile Include="Impl\RealEstateRepository.cs" />
     <Compile Include="Entites\Transaction.cs" />
     <Compile Include="Entites\TransactionType.cs" />
-    <Compile Include="Repositories\IRoleRepository.cs" />
-    <Compile Include="Repositories\IUserRepository.cs" />
     <Compile Include="UnitsOfWorks\Impl\UnitOfWork.cs" />
     <Compile Include="UnitsOfWorks\Impl\UnitOfWorkFactory.cs" />
     <Compile Include="UnitsOfWorks\IUnitOfWorkFactory.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
+    <Compile Include="ViewModels\Manage\RealtyManageViewModel.cs" />
     <Compile Include="ViewModels\SearchResult.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,10 +1,11 @@
 ﻿using RealtyInvest.Common.ServiceResult;
 using RealtyInvest.DataModel.Models;
+using RealtyInvest.DataModel.ViewModels;
 
 namespace RealtyInvest.Core.Services
 {
     public interface IRealtySearchService
     {
-        ServiceResult<ServiceResult[]> Search(SearchModel model);
+        ServiceResult<SearchResult[]> Search(SearchModel model);
     }
 }

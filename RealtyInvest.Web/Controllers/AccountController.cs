@@ -116,7 +116,6 @@ namespace RealtyInvest.Web.Controllers
 
         //
         // GET: /Account/Manage
-        [ChildActionOnly]
         public ActionResult Manage(ManageMessageId? message)
         {
             ViewBag.StatusMessage =

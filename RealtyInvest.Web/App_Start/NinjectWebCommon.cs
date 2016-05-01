@@ -1,18 +1,24 @@
-using System;
-using System.Web;
-using Microsoft.Web.Infrastructure.DynamicModuleHelper;
-using Ninject;
-using Ninject.Web.Common;
-using System.Web.Mvc;
+using RealtyInvest.Core.Services;
+using RealtyInvest.Core.Services.Impl;
+using RealtyInvest.DataModel.UnitsOfWorks;
+using RealtyInvest.DataModel.UnitsOfWorks.Impl;
 
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(RealtyInvest.Web.NinjectWebCommon), "Start")]
-[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(RealtyInvest.Web.NinjectWebCommon), "Stop")]
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(RealtyInvest.Web.App_Start.NinjectWebCommon), "Start")]
+[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(RealtyInvest.Web.App_Start.NinjectWebCommon), "Stop")]
 
-namespace RealtyInvest.Web
+namespace RealtyInvest.Web.App_Start
 {
+    using System;
+    using System.Web;
+
+    using Microsoft.Web.Infrastructure.DynamicModuleHelper;
+
+    using Ninject;
+    using Ninject.Web.Common;
+
     public static class NinjectWebCommon 
     {
-        public static readonly Bootstrapper Bootstrapper = new Bootstrapper();
+        private static readonly Bootstrapper bootstrapper = new Bootstrapper();
 
         /// <summary>
         /// Starts the application
@@ -21,7 +27,7 @@ namespace RealtyInvest.Web
         {
             DynamicModuleUtility.RegisterModule(typeof(OnePerRequestHttpModule));
             DynamicModuleUtility.RegisterModule(typeof(NinjectHttpModule));
-            Bootstrapper.Initialize(CreateKernel);
+            bootstrapper.Initialize(CreateKernel);
         }
         
         /// <summary>
@@ -29,7 +35,7 @@ namespace RealtyInvest.Web
         /// </summary>
         public static void Stop()
         {
-            Bootstrapper.ShutDown();
+            bootstrapper.ShutDown();
         }
         
         /// <summary>
@@ -60,7 +66,10 @@ namespace RealtyInvest.Web
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            DependencyResolver.SetResolver(new  RealtyInvestDependencyResolver(kernel));
+            kernel.Bind<IUnitOfWorkFactory>().To<UnitOfWorkFactory>();
+            //Services
+            kernel.Bind<IRealtySearchService>().To<RealtySearchService>();
+            kernel.Bind<IManagementService>().To<ManagementService>();
         }        
     }
 }

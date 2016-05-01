@@ -1,6 +1,7 @@
 ﻿using RealtyInvest.Common.ServiceResult;
 using RealtyInvest.DataModel.Models;
 using RealtyInvest.DataModel.UnitsOfWorks;
+using RealtyInvest.DataModel.ViewModels;
 
 namespace RealtyInvest.Core.Services.Impl
 {
@@ -12,11 +13,20 @@ namespace RealtyInvest.Core.Services.Impl
             _factory = factory;
         }
 
-        public ServiceResult<ServiceResult[]> Search(SearchModel model)
+        public ServiceResult<SearchResult[]> Search(SearchModel model)
         {
-            ServiceResult<ServiceResult[]> result = new ServiceResult<ServiceResult[]>();
+            ServiceResult<SearchResult[]> result = new ServiceResult<SearchResult[]>();
             using (var uow = _factory.CreateUnitOfWork())
             {
+                result.Value = new SearchResult[]
+                {
+                    new SearchResult {Price = 10, RealtyName = "Dom v tsarskom sele", PictureUrl = "http://storage.googleapis.com/bd-ua-01/buildings/11762.jpg" },
+                    new SearchResult {Price = 10, RealtyName = "Dom v tsarskom sele", PictureUrl = "http://storage.googleapis.com/bd-ua-01/buildings/11762.jpg" },
+                    new SearchResult {Price = 10, RealtyName = "Dom v tsarskom sele", PictureUrl = "http://storage.googleapis.com/bd-ua-01/buildings/11762.jpg" },
+                    new SearchResult {Price = 10, RealtyName = "Dom v tsarskom sele", PictureUrl = "http://storage.googleapis.com/bd-ua-01/buildings/11762.jpg" },
+                    new SearchResult {Price = 10, RealtyName = "Dom v tsarskom sele", PictureUrl = "http://storage.googleapis.com/bd-ua-01/buildings/11762.jpg" },
+                    new SearchResult {Price = 10, RealtyName = "Dom v tsarskom sele", PictureUrl = "http://storage.googleapis.com/bd-ua-01/buildings/11762.jpg" }
+                };
                 result.ServiceStatus = Status.Success;
             }
             return result;

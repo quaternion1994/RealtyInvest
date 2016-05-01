@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-md-8">
             <section>
-                @using (Ajax.BeginForm("Login", "Account", new AjaxOptions { UpdateTargetId = "loginContext", HttpMethod = "POST" }, new { @class = "form-horizontal", id = "loginForm", role = "form" }))
+                @using (Ajax.BeginForm("Login", "Account", new AjaxOptions { UpdateTargetId = "loginContext",  OnSuccess= "angular.element(document.querySelector('#LoginDlg')).scope().success(data)", HttpMethod = "POST" }, new { @class = "form-horizontal", id = "loginForm", role = "form" }))
                 {
                     @Html.AntiForgeryToken()
                     <hr />

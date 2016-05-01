@@ -11,11 +11,13 @@ namespace RealtyInvest.Web.Controllers
         {
             _realtySearch = searchService;
         }
+
         // GET: /
         public ActionResult Index()
         {
             return View();
         }
+
         // POST: Search
         [HttpPost]
         public ActionResult Results(SearchModel model)
@@ -24,7 +26,7 @@ namespace RealtyInvest.Web.Controllers
             if (result.ServiceStatus != Common.ServiceResult.Status.Success)
                 return RedirectToAction("Index");
 
-            return View();
+            return View(result.Value);
         }
     }
 }

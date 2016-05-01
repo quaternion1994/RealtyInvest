@@ -7,10 +7,19 @@ app.controller('LoginCtrl', function ($scope, $uibModal,  $log) {
     $scope.openRegistration = function () {
         $('#RegisterDlg').modal();
     };
+
+    (function init() {
+
+    })();
 });
 
 app.controller('LoginInstanceCtrl', function ($scope, $log) {
-
+    $scope.success = function (result) {
+        if (result === 'OK') {
+            $('#LoginDlg').modal('hide');
+            document.location = "\\";
+        }
+    };
     $scope.login = function () {
         $('#loginForm').submit();
     };
@@ -20,6 +29,12 @@ app.controller('LoginInstanceCtrl', function ($scope, $log) {
     };
 });
 app.controller('RegInstanceCtrl', function ($scope, $log) {
+    $scope.success = function (result) {
+        if (result === 'OK') {
+            $('#RegisterDlg').modal('hide');
+            document.location = "\\";
+        }
+    };
 
     $scope.ok = function () {
         $('#registrationForm').submit();

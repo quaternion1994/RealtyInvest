@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Razor;
 
-namespace RealtyInvest.Common.Helpers
+namespace RealtyInvest.Common.Utils
 {
     public static class WidgetHelpers
     {

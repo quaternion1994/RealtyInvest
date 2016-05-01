@@ -8,8 +8,8 @@ namespace RealtyInvest.DataModel.Entites
         public System.DateTime Date { get; set; }
         public int InvestorId { get; set; }
         public int OwnerId { get; set; }
-        public virtual Owner Owner { get; set; }
-        public virtual Investor Investor { get; set; }
+        public virtual RealtyInvestUser Owner { get; set; }
+        public virtual RealtyInvestUser Investor { get; set; }
         public virtual RealEstate RealEstate { get; set; }
     }
 }

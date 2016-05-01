@@ -1,0 +1,26 @@
+﻿@model IEnumerable<RealtyInvest.DataModel.ViewModels.SearchResult>
+@{
+    ViewBag.Title = "Search results";
+}
+
+<h2>@ViewBag.Title </h2>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-2 col-md-3">
+            <div class="thumbnail">
+                <img src="@item.PictureUrl" alt="...">
+                <div class="caption">
+                    <h3>@item.RealtyName</h3>
+                    <p>$@item.Price</p>
+                    <p>@item.Description</p>
+                    <p>
+                        <a href="@Url.Action("RealtyView","Home")" class="btn btn-primary" role="button">Go</a>
+                        <a href="#" class="btn btn-default" role="button">Button</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
