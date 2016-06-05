@@ -7,5 +7,6 @@ namespace RealtyInvest.Core.Services
     public interface IRealtySearchService
     {
         ServiceResult<SearchResult[]> Search(SearchModel model);
+        ServiceResult<SearchResult[]> AutoSearch(string userid,string text);
     }
 }

@@ -24,33 +24,39 @@ namespace RealtyInvest.DataModel
         public virtual DbSet<Transaction> TransactionSet { get; set; }
     }
 
-    public class RealtyInvestInitializer :  IDatabaseInitializer<RealtyInvestDbContext>
+    public class RealtyInvestInitializer :  DropCreateDatabaseIfModelChanges<RealtyInvestDbContext>
     {
         const string Investor = "Investor";
         const string Owner = "Owner";
-        public void InitializeDatabase(RealtyInvestDbContext context)
+        protected override void Seed(RealtyInvestDbContext context)
         {
             var userManager = new UserManager<RealtyInvestUser>(new UserStore<RealtyInvestUser>(context));
             var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
-            
+            userManager.Create(new RealtyInvestUser
+            {
+                UserName = "vlad"
+            }, "qwerty123");
+
             try
             {
-                if(!roleManager.RoleExists(Investor))
+                if (!roleManager.RoleExists(Investor))
                     roleManager.Create(new IdentityRole { Name = Investor });
-                if(!roleManager.RoleExists(Owner))
-                    roleManager.Create(new IdentityRole { Name = Owner});
+                if (!roleManager.RoleExists(Owner))
+                    roleManager.Create(new IdentityRole { Name = Owner });
 
                 string[] owners = ConfigurationManager.AppSettings["Owners"].Split(',');
                 foreach (var owner in owners)
                 {
                     var user = userManager.FindByName(owner);
-                    if(!userManager.IsInRole(user.Id, Owner))
+                    if (!userManager.IsInRole(user.Id, Owner))
                         userManager.AddToRole(user.Id, Owner);
                 }
             }
             finally
             {
-                context.SaveChanges();
+                userManager.Dispose();
+                roleManager.Dispose();
+                base.Seed(context);
             }
         }
     }

@@ -5,12 +5,12 @@
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "nav navbar-nav navbar-right" }))
     {
         @Html.AntiForgeryToken()
-        <li class="navbar-link"><a href="@Url.Action("Manage", "Account")">Здравствуйте, @User.Identity.GetUserName()</a></li>
-        <li class="navbar-link"><a href="javascript:document.getElementById('logoutForm').submit()">Выйти</a></li>
+        <li class="navbar-link"><a href="@Url.Action("Manage", "Account")">Welcome, @User.Identity.GetUserName()</a></li>
+        <li class="navbar-link"><a href="javascript:document.getElementById('logoutForm').submit()">Log out</a></li>
     }
 }
 else
 {
-    <li><a href="#" ng-click="openRegistration()">Регистрация</a></li>
-    <li><a href="#" ng-click="openLogin()">Выполнить вход</a></li>
+    <li><a href="#" ng-click="openRegistration()">Registration</a></li>
+    <li><a href="#" ng-click="openLogin()">Login</a></li>
 }

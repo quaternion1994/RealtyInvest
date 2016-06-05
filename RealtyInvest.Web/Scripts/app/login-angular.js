@@ -1,6 +1,4 @@
-var app = angular.module('RealtyInvest.App', ['ui.bootstrap', 'ngAnimate']);
-
-app.controller('LoginCtrl', function ($scope, $uibModal,  $log) {
+function loginCtrl($scope, $uibModal,  $log) {
     $scope.openLogin = function () {
         $('#LoginDlg').modal();
     };
@@ -11,9 +9,8 @@ app.controller('LoginCtrl', function ($scope, $uibModal,  $log) {
     (function init() {
 
     })();
-});
-
-app.controller('LoginInstanceCtrl', function ($scope, $log) {
+}
+function loginInstanceCtrl ($scope, $log) {
     $scope.success = function (result) {
         if (result === 'OK') {
             $('#LoginDlg').modal('hide');
@@ -27,8 +24,8 @@ app.controller('LoginInstanceCtrl', function ($scope, $log) {
     $scope.cancel = function () {
         $('#LoginDlg').modal('hide');
     };
-});
-app.controller('RegInstanceCtrl', function ($scope, $log) {
+}
+function regInstanceCtrl($scope, $log) {
     $scope.success = function (result) {
         if (result === 'OK') {
             $('#RegisterDlg').modal('hide');
@@ -43,4 +40,7 @@ app.controller('RegInstanceCtrl', function ($scope, $log) {
     $scope.cancel = function () {
         $('#RegisterDlg').modal('hide');
     };
-});
+}
+angular.module('RealtyInvest.App').controller('LoginCtrl', loginCtrl);
+angular.module('RealtyInvest.App').controller('LoginInstanceCtrl', loginInstanceCtrl);
+angular.module('RealtyInvest.App').controller('RegInstanceCtrl', regInstanceCtrl);

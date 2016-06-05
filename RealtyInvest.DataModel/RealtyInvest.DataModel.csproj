@@ -93,6 +93,8 @@
     <Compile Include="Entites\RealtyInvestUser.cs" />
     <Compile Include="Entites\Resource.cs" />
     <Compile Include="Impl\Repository.cs" />
+    <Compile Include="Models\ChartPoint.cs" />
+    <Compile Include="Models\RawPriceHistory.cs" />
     <Compile Include="Models\SearchModel.cs" />
     <Compile Include="Repositories\IRealEstateRepository.cs" />
     <Compile Include="Repositories\IRepository.cs" />

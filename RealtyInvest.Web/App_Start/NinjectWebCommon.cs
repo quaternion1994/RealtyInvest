@@ -70,6 +70,7 @@ namespace RealtyInvest.Web.App_Start
             //Services
             kernel.Bind<IRealtySearchService>().To<RealtySearchService>();
             kernel.Bind<IManagementService>().To<ManagementService>();
+            kernel.Bind<IForecastService>().To<ForecastService>();
         }        
     }
 }

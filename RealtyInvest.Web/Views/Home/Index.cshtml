@@ -1,18 +1,48 @@
 ﻿@{
     ViewBag.Title = "Биржа квадратных сантиметров";
 }
-
-<div class="form-group search-box">
-    @using (Html.BeginForm("Results", "Search", FormMethod.Post))
-    {
-        @Html.AntiForgeryToken()
-        <div class="col-md-7"><input class="form-control" name="name" type="text" placeholder="Владелец, Место, Адрес"></div>
-        <div class="col-md-4 pull-right"><button class="btn btn-default" type="submit">Поиск</button></div>
-    }
+<script type="text/ng-template" id="typeaheadTemplate.html">
+    <a>
+        <span style="font-weight:bold;" ng-bind-html="match.model.RealtyName | uibTypeaheadHighlight:query">{{match.model.RealtyName}}</span>
+        <span ng-bind-html="match.model.Price">{{match.model.Price}}</span>
+    </a>
+</script>
+<div class="jumbotron-realtyinvest">
+    <div class="form-horizontal">
+            <div class="page-header">
+            </div>
+            <div class="form-group" ng-controller="SearchCtrl">
+                @using (Html.BeginForm("Results", "Search", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <h2>Invest right away! Get profit tomorrow.</h2>
+                    <input type="text" ng-model="asyncSelected" typeahead-template-url="typeaheadTemplate.html"
+                            placeholder="Name, Location, Owner" uib-typeahead="model as model.RealtyName for model in getRealEstate($viewValue)"
+                            typeahead-loading="loadingLocations"
+                            typeahead-no-results="noResults"
+                            class="form-control">
+                    <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+                    <div ng-show="noResults">
+                        <i class="glyphicon glyphicon-remove"></i> No Results Found
+                    </div>
+                }
+            </div>
+        <a class="btn btn-lg btn-success" href="#" role="button">View All On Map</a>
+        </div>
 </div>
-<div class="form-group">
-    <h3>Топ-недвижимость</h3>
-    <div>
+<div class="container">
+    <div class="form-group">
+        <h3>Топ-недвижимость</h3>
+        <div>
 
+        </div>
     </div>
 </div>
+    @section scripts
+{
+        <script type="text/javascript">
+            angular.module('RealtyInvest.App').constant('settings', {
+                SearchUrl: "@Url.Action("Autocomplete", "Search")"
+            });
+        </script>
+    }

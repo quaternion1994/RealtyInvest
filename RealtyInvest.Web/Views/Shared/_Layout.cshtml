@@ -25,8 +25,8 @@
             </div>
             <div id="navbar">
                 <ul class="nav navbar-nav">
-                    <li><a href="@Url.Action("Realty", "Home")">Недвижимость</a></li>
-                    <li><a href="@Url.Action("About", "Home")">Как это работает?</a></li>
+                    <li><a href="@Url.Action("Realty", "Home")">Realty</a></li>
+                    <li><a href="@Url.Action("About", "Home")">How it works?</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right" ng-controller="LoginCtrl">
                     @Html.Partial("_LoginPartial")
@@ -34,10 +34,8 @@
             </div>
         </div>
     </nav>
-    <div class="container realtyinvest">
             @RenderSection("featured", required: false)
             @RenderBody()
-    </div>
     <footer class="footer">
         <div class="container">
             <div class="col-lg-4">
@@ -70,24 +68,27 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="RegisterDlg" role="dialog" ng-controller="RegInstanceCtrl">
-        <div class="modal-dialog" style="width:70%">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title">Registration</h3>
-                </div>
-                <div id="registerContext">
-                    @Html.Action("Register", "Account")
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-primary" type="button" ng-click="ok()">Register</button>
-                    <button class="btn btn-primary" type="button" ng-click="cancel()">Cancel</button>
-                </div>
+<div class="modal fade" id="RegisterDlg" role="dialog" ng-controller="RegInstanceCtrl">
+    <div class="modal-dialog" style="width: 70%">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Registration</h3>
+            </div>
+            <div id="registerContext">
+                @Html.Action("Register", "Account")
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="button" ng-click="ok()">Register</button>
+                <button class="btn btn-primary" type="button" ng-click="cancel()">Cancel</button>
             </div>
         </div>
     </div>
-    @RenderSection("modals", required: false)
-    @RenderSection("scripts", required: false)
+</div>
+    @Scripts.Render("~/bundles/angular-app")
+    @Scripts.Render("~/bundles/angular-main")
+@RenderSection("modals", required: false)
+@RenderSection("scripts", required: false)
+
 </body>
 </html>

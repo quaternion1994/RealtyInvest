@@ -5,6 +5,7 @@ using RealtyInvest.Common.ServiceResult;
 using RealtyInvest.DataModel.Entites;
 using RealtyInvest.DataModel.UnitsOfWorks;
 using RealtyInvest.DataModel.ViewModels.Manage;
+using System.Linq;
 
 namespace RealtyInvest.Core.Services.Impl
 {
@@ -24,15 +25,18 @@ namespace RealtyInvest.Core.Services.Impl
                 using (var uow = _factory.CreateUnitOfWork())
                 {
                     //uow.RealEstateRepository.Find(x => x.Owner.Id == userid);
-                    result.Value = new RealtyManageViewModel[]
-                    {
-                        new RealtyManageViewModel {Price = 10, Name = "Dom v tsarskom sele", PictureUrl = "http://storage.googleapis.com/bd-ua-01/buildings/11762.jpg" },
-                        new RealtyManageViewModel {Price = 10, Name = "Dom v tsarskom sele", PictureUrl = "http://storage.googleapis.com/bd-ua-01/buildings/11762.jpg" },
-                        new RealtyManageViewModel {Price = 10, Name = "Dom v tsarskom sele", PictureUrl = "http://storage.googleapis.com/bd-ua-01/buildings/11762.jpg" },
-                        new RealtyManageViewModel {Price = 10, Name = "Dom v tsarskom sele", PictureUrl = "http://storage.googleapis.com/bd-ua-01/buildings/11762.jpg" },
-                        new RealtyManageViewModel {Price = 10, Name = "Dom v tsarskom sele", PictureUrl = "http://storage.googleapis.com/bd-ua-01/buildings/11762.jpg" },
-                        new RealtyManageViewModel {Price = 10, Name = "Dom v tsarskom sele", PictureUrl = "http://storage.googleapis.com/bd-ua-01/buildings/11762.jpg" }
-                    };
+                    result.Value = uow.RealEstateRepository
+                        .All(x => x.Owner.Id == userid)
+                        .Select(x => new RealtyManageViewModel
+                        {
+                            Id = x.Id,
+                            Description = x.Description,
+                            Location = x.Location,
+                            Name = x.Name,
+                            PictureUrl = x.MainPictureUrl,
+                            Price = x.Price,
+                            Square = x.Square
+                        }).ToArray();
                     result.ServiceStatus = Status.Success;
                 }
             }
@@ -50,21 +54,24 @@ namespace RealtyInvest.Core.Services.Impl
             {
                 using (var uow = _factory.CreateUnitOfWork())
                 {
-                    //result.Value = uow.RealEstateRepository.Find(x => x.Owner.Id == userid && x.Id == id);
-                    var arr = new RealtyManageViewModel[]
+                    var estate = uow.RealEstateRepository
+                        .Find(y => y.Owner.Id == userid && y.Id == id);
+
+                    result.Value = new RealtyManageViewModel
                     {
-                        new RealtyManageViewModel {Price = 10, Name = "Dom v tsarskom sele", PictureUrl = "http://storage.googleapis.com/bd-ua-01/buildings/11762.jpg" },
-                        new RealtyManageViewModel {Price = 10, Name = "Dom v tsarskom sele", PictureUrl = "http://storage.googleapis.com/bd-ua-01/buildings/11762.jpg" },
-                        new RealtyManageViewModel {Price = 10, Name = "Dom v tsarskom sele", PictureUrl = "http://storage.googleapis.com/bd-ua-01/buildings/11762.jpg" },
-                        new RealtyManageViewModel {Price = 10, Name = "Dom v tsarskom sele", PictureUrl = "http://storage.googleapis.com/bd-ua-01/buildings/11762.jpg" },
-                        new RealtyManageViewModel {Price = 10, Name = "Dom v tsarskom sele", PictureUrl = "http://storage.googleapis.com/bd-ua-01/buildings/11762.jpg" },
-                        new RealtyManageViewModel {Price = 10, Name = "Dom v tsarskom sele", PictureUrl = "http://storage.googleapis.com/bd-ua-01/buildings/11762.jpg" }
+                        Id = estate.Id,
+                        Description = estate.Description,
+                        Location = estate.Location,
+                        Name = estate.Name,
+                        PictureUrl = estate.MainPictureUrl,
+                        Price = estate.Price,
+                        Square = estate.Square
                     };
-                    result.Value = arr[id];
+                    
                     result.ServiceStatus = Status.Success;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 
             }
@@ -82,31 +89,31 @@ namespace RealtyInvest.Core.Services.Impl
                     ;
                     if (entity == null)
                     {
-                        uow.RealEstateRepository.Add(new DataModel.Entites.RealEstate
+                        uow.RealEstateRepository.Add(new RealEstate
                         {
                             Name = model.Name,
                             Price = model.Price,
                             Square = model.Square,
+                            MainPictureUrl = model.PictureUrl,
                             Description = model.Description,
+                            Location = model.Location,
                             Owner = uow.UserManager.FindById(userid)
                         });
                     }
                     else
                     {
-                        uow.RealEstateRepository.Update(new RealEstate
-                        {
-                            Id = model.Id,
-                            Name = model.Name,
-                            Price = model.Price,
-                            Square = model.Square,
-                            Description = model.Description,
-                            MainPictureUrl = model.PictureUrl,
-                        });
+                        entity.Name = model.Name;
+                        entity.Price = model.Price;
+                        entity.Square = model.Square;
+                        entity.Description = model.Description;
+                        entity.MainPictureUrl = model.PictureUrl;
+                        entity.Location = model.Location;
+                        uow.RealEstateRepository.Update(entity);
                     }
                     result.ServiceStatus = Status.Success;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
             }

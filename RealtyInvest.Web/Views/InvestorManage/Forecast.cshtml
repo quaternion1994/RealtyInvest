@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Forecast";
+    Layout = "~/Views/InvestorManage/Index.cshtml";
+}
+
+@section scripts
+{
+    <script type="text/javascript">
+            angular.module('RealtyInvest.App').constant('forecastsettings', {
+                UpdateData: "@Url.Action("Forecast", "InvestorManage")"
+            });
+    </script>
+    @Scripts.Render("~/bundles/admin-forecast")
+}
+<h2>Forecast</h2>
+
+<div ng-controller="ForecastCtrl">
+    <select ng-model="period" ng-change="loadData()" ng-init="period=0">
+        <option vlaue="0">All along</option>
+        <option vlaue="1">Year</option>
+        <option vlaue="2">Month</option>
+    </select>
+
+    <div ng-init="initChart()">
+        <canvas id="forecastChart" width="400" height="200"></canvas>
+    </div>
+</div>

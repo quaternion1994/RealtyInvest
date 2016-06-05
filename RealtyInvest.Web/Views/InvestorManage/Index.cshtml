@@ -6,27 +6,29 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="page-header">
-    <h2>@ViewBag.Title</h2>
-</div>
+<div class="container realtyinvest-container">
+    <div class="page-header">
+        <h2>@ViewBag.Title</h2>
+    </div>
 
-<div class="row">
-    <div class="col-lg-3">
-        <div class="list-group">
-            <a type="button" class="list-group-item @Html.IsSelected(actions: "Manage", controllers: "Account", cssClass:"active")" href="@Url.Action("Manage", "Account")">Account management</a>
-            @if (Request.IsAuthenticated && User.IsInRole("Owner"))
-            {
-                <a type="button" class="list-group-item @Html.IsSelected(actions: "MyEstate", controllers: "InvestorManage", cssClass:"active")" href="@Url.Action("MyEstate", "InvestorManage")">My real estate</a>
-                <a type="button" class="list-group-item">Morbi leo risus</a>
-                <a type="button" class="list-group-item">Porta ac consectetur ac</a>
-                <a type="button" class="list-group-item">Vestibulum at eros</a>
-              }
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="list-group">
+                <a type="button" class="list-group-item @Html.IsSelected(actions: "Manage", controllers: "Account", cssClass: "active")" href="@Url.Action("Manage", "Account")">Account management</a>
+                @if (Request.IsAuthenticated && User.IsInRole("Owner"))
+                {
+                    <a type="button" class="list-group-item @Html.IsSelected(actions: "MyEstate", controllers: "InvestorManage", cssClass: "active")" href="@Url.Action("MyEstate", "InvestorManage")">Real estate</a>
+                    <a type="button" class="list-group-item @Html.IsSelected(actions: "Forecast", controllers: "InvestorManage", cssClass: "active")" href="@Url.Action("Forecast", "InvestorManage")">Price forecast</a>
+                }
+            </div>
+        </div>
+        <div class="col-lg-7">
+            @RenderBody()
         </div>
     </div>
-    <div class="col-lg-7">
-       @RenderBody()
-    </div>
 </div>
+
 @section scripts {
+    @RenderSection("scripts", false)
     @Scripts.Render("~/bundles/jqueryval")
 }

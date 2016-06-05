@@ -1,6 +1,7 @@
 ﻿using System.Web.Mvc;
 using RealtyInvest.Core.Services;
 using Microsoft.AspNet.Identity;
+using RealtyInvest.Common;
 using RealtyInvest.DataModel.ViewModels.Manage;
 
 namespace RealtyInvest.Web.Controllers
@@ -8,17 +9,19 @@ namespace RealtyInvest.Web.Controllers
     public class InvestorManageController : Controller
     {
         private readonly IManagementService _manService;
+        private readonly IForecastService _forecastService;
 
-        public InvestorManageController(IManagementService manService)
+        public InvestorManageController(IManagementService manService, IForecastService forecastService)
         {
             _manService = manService;
+            _forecastService = forecastService;
         }
 
         // GET: InvestorManage
         [Authorize(Roles = "Owner, Investor")]
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("MyEstate");
         }
 
         [Authorize(Roles = "Owner")]
@@ -48,6 +51,23 @@ namespace RealtyInvest.Web.Controllers
                 return null;
 
             return RedirectToAction("MyEstate");
+        }
+
+        [Authorize(Roles = "Owner")]
+        public ActionResult Forecast()
+        {
+            return View();
+        }
+
+        [Authorize(Roles = "Owner")]
+        [HttpPost]
+        public ActionResult Forecast(HistoryPeriod period)
+        {
+            var result = _forecastService.GetLandPriceForecast(period);
+            if (result.ServiceStatus != Common.ServiceResult.Status.Success)
+                return null;
+
+            return Json(result.Value);
         }
     }
 }

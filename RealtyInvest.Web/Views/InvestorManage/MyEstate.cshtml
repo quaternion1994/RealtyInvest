@@ -5,11 +5,10 @@
     Layout = "~/Views/InvestorManage/Index.cshtml";
 }
 
-
 <div class="row">
     @foreach (var item in Model)
     {
-        <div class="col-sm-2 col-md-3">
+        <div class="col-sm-2 col-md-4">
             <div class="thumbnail">
                 <img src="@item.PictureUrl" alt="@item.Name">
                 <div class="caption">

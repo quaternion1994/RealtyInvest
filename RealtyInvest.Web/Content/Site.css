@@ -1,9 +1,6 @@
 ﻿.realtyinvest {
         padding-top: 40px;
 }
-.search-box {
-        padding-bottom: 15px;
-}
 .footer {
     background-color: black;
     padding-top: 15px;
@@ -32,7 +29,23 @@
     .footer .bold-text {
         font-weight: bold;
     }
-
+    .jumbotron-realtyinvest {
+        text-align: center;
+        height: 400px;
+        padding-right: 60px;
+        padding-left: 60px;
+        background-image: url("img/maintitle.JPG");
+        background-position-y: center;
+        background-size:cover;
+    }
+    .jumbotron-realtyinvest h2 {
+            color: #ffffff;
+            font-weight: bold;
+            text-shadow: 1px 1px 10px #000;
+    }
+    .realtyinvest-container {
+        padding-top: 30px;
+    }
 .field-validation-error
 {
     color: #ff0000;
@@ -58,4 +71,9 @@
 .validation-summary-valid
 {
     display: none;
+}
+.angular-google-map-container { height: 400px; }
+textarea .description {
+    min-width : 300px;
+    min-height: 300px;
 }
