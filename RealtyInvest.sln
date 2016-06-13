@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealtyInvest.DataModel", "RealtyInvest.DataModel\RealtyInvest.DataModel.csproj", "{650FF573-E89B-45DF-8979-386AC610C0FC}"
 EndProject
@@ -17,6 +17,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealtyInvest.Common", "RealtyInvest.Common\RealtyInvest.Common.csproj", "{746ADDD4-FFB3-4436-A0A2-16E20A8E7E93}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealtyInvest.Core", "RealtyInvest.Core\RealtyInvest.Core.csproj", "{29911504-3AD9-432C-BBA9-84918FBBB15A}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "RealtyInvest.Modeling", "RealtyInvest.Modeling\RealtyInvest.Modeling.modelproj", "{E575EC5E-1DEC-43BD-9BC1-E5F2A00B84D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,10 @@ Global
 		{29911504-3AD9-432C-BBA9-84918FBBB15A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29911504-3AD9-432C-BBA9-84918FBBB15A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29911504-3AD9-432C-BBA9-84918FBBB15A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E575EC5E-1DEC-43BD-9BC1-E5F2A00B84D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E575EC5E-1DEC-43BD-9BC1-E5F2A00B84D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E575EC5E-1DEC-43BD-9BC1-E5F2A00B84D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E575EC5E-1DEC-43BD-9BC1-E5F2A00B84D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

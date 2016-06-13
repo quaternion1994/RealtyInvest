@@ -1,0 +1,1517 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+  dslVersion="1.0.0.0"
+  Id="aeecb088-0929-4a26-8116-942525820e2f"
+  name="RealtyInvest.Modeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="2ab721fb-4443-4694-8ead-51700040c12e">
+      <body>Диаграма діяльності аналізу ціни</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="c2334485-424f-41d7-b06f-53a03e53a9b7"
+        name="Interface1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3a14b175-0721-4538-b3c3-3ae2eb1af0f9"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="184d5fbc-563a-4606-befe-01e549b68fe1"
+            name="Attribute1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d4260532-644b-45c5-a1a9-5d425a9fc67a"
+            name="Attribute2"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="70b1ea04-3f81-4130-b7b3-ecbcb7913512"
+        name="Власник\Експерт"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="f35d6431-545c-411d-b4ef-24dfdc4b2693"
+            isDerived="false"
+            sourceEndRoleName="Власник\Експерт"
+            targetEndRoleName="Купівля\Продаж"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c1adb673-5dee-40bb-aaf3-8810f339a66b"
+              LastKnownName="Купівля\Продаж"
+              LastKnownLocation="RealtyInvest.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8fbd987c-27c9-45cf-bec1-710530eb99b9"
+                  name="Власник\Експерт"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b578c991-838e-4a43-a592-700e2044a3eb"
+                  name="Купівля\Продаж"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="cef84c0c-a8fb-4fc2-a4c1-b527d9606ff4"
+            isDerived="false"
+            sourceEndRoleName="Власник\Експерт"
+            targetEndRoleName="Прогнозування ціни на землю"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="dbb9872a-8dba-402d-b4ab-096e0f769632"
+              LastKnownName="Прогнозування ціни на землю"
+              LastKnownLocation="RealtyInvest.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="91660c4e-3b55-4c8a-bdde-dafeda9757c5"
+                  name="Власник\Експерт"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7f786c00-8fa6-4dba-ab0a-3a631f9c009d"
+                  name="Прогнозування ціни на землю"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="4ffbae0a-13c3-4737-9da7-5ceba8b60d78"
+            isDerived="false"
+            sourceEndRoleName="Власник\Експерт"
+            targetEndRoleName="Стоврення\Редагування\Видалення нерухомості"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3c100a8f-33e8-4e50-a52a-a6cbe18978d7"
+              LastKnownName="Стоврення\Редагування\Видалення нерухомості"
+              LastKnownLocation="RealtyInvest.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7507e772-e345-48eb-ad8f-680c0f9118ea"
+                  name="Власник\Експерт"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="020d3831-a3ae-4a04-b523-285c0d1ef4cd"
+                  name="Стоврення\Редагування\Видалення нерухомості"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="13bfb65c-6bd3-4584-9ec6-b1c046b046de"
+        name="Інвестор"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="cfeeee18-5963-418f-a202-524842a54163"
+            isDerived="false"
+            sourceEndRoleName="Інвестор"
+            targetEndRoleName="Інвестування"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="089d0ab8-b1ff-4092-b4e6-abb1260e1bad"
+              LastKnownName="Купівля\Продаж певної площі"
+              LastKnownLocation="RealtyInvest.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a8172c00-2fd7-402e-87ae-e98b7acceea8"
+                  name="Інвестор"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="95b691db-7276-493c-a2ab-f17030e4d833"
+                  name="Інвестування"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="089d0ab8-b1ff-4092-b4e6-abb1260e1bad"
+        name="Купівля\Продаж певної площі"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="dbb9872a-8dba-402d-b4ab-096e0f769632"
+        name="Прогнозування ціни на землю"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="23826dd9-52bd-4672-9ad0-8806cad7d882">
+            <useCaseMoniker
+              Id="7c530ea1-3637-4ad8-a516-5ae41860cbf4"
+              LastKnownName="Множинна адаптивна регресія"
+              LastKnownLocation="RealtyInvest.Modeling.uml" />
+          </include>
+          <include
+            Id="1dd224d7-460b-4218-9f3f-6442139f865a">
+            <useCaseMoniker
+              Id="af91c04d-688a-4c15-9567-8809c0a99bf1"
+              LastKnownName="Збір даних з інших джерел"
+              LastKnownLocation="RealtyInvest.Modeling.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0ac974f7-6ff5-4888-9a89-747c34491d82"
+        name="UseCase1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c1adb673-5dee-40bb-aaf3-8810f339a66b"
+        name="Купівля\Продаж"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="1ef1a7f1-4f2a-495a-9028-9c2f0b7d6c58"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="089d0ab8-b1ff-4092-b4e6-abb1260e1bad"
+              LastKnownName="Купівля\Продаж певної площі"
+              LastKnownLocation="RealtyInvest.Modeling.uml" />
+          </generalization>
+          <generalization
+            Id="c9ecaa75-4dd3-48ad-aec8-b87a2b74dea8"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="9aff0b36-b74c-4e43-ba47-b4bfe52dc08d"
+              LastKnownName="Купівля\Продаж землі"
+              LastKnownLocation="RealtyInvest.Modeling.uml" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9aff0b36-b74c-4e43-ba47-b4bfe52dc08d"
+        name="Купівля\Продаж землі"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="0941fbc1-8c82-4364-a849-815b855370db"
+        name="Subsystem1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3c100a8f-33e8-4e50-a52a-a6cbe18978d7"
+        name="Стоврення\Редагування\Видалення нерухомості"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7c530ea1-3637-4ad8-a516-5ae41860cbf4"
+        name="Множинна адаптивна регресія"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="af91c04d-688a-4c15-9567-8809c0a99bf1"
+        name="Збір даних з інших джерел"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a687864f-ee23-446f-92b3-841000590f03"
+        name="RealtyEstate"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="485cdbc8-0240-41da-980f-ecbc952d7a6e"
+            isDerived="false"
+            sourceEndRoleName="RealtyEstate"
+            targetEndRoleName="User"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="2882028a-6692-4b00-839b-3e10a1b06332"
+              LastKnownName="RealtyInvestUser"
+              LastKnownLocation="RealtyInvest.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1bdc06c5-2210-4aa6-a34d-6d3f4b30c787"
+                  name="RealtyEstate"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="2e4cc604-ef6e-4c14-af02-6af3e6f0444b"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="9c1ddebd-66e9-4aa8-97f5-6d28ce03164f"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b81a2af0-b564-4bbf-9537-6ee1386a02dd"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="4882879d-e5c0-46fe-bd12-43ddad9bbf72"
+            isDerived="false"
+            sourceEndRoleName="RealtyEstate"
+            targetEndRoleName="RealEstateRepository"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="2ee3db12-6a8d-40c8-b3e3-af1da7c0ca27"
+              LastKnownName="RealEstateRepository"
+              LastKnownLocation="RealtyInvest.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7069030a-b37f-4827-89ee-ef0a16eaaff0"
+                  name="RealtyEstate"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2e066b58-7ec1-4793-a5c4-75fbc2711480"
+                  name="RealEstateRepository"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="93404942-1334-4f3a-817a-237ee37dcde8"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="f6e7fe24-c535-4dcb-a477-b8a6b9833e1b"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="831afcf9-357b-490a-8c7f-d1243770a35b"
+            name="Square"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="63f34a78-baa7-42c1-a288-d0060ec65b33"
+            name="Description"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="dd2860c9-ab21-425d-ac3a-3406bdd77e0b"
+            name="Price for a cm"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="c1d700fc-7a43-4170-8ce8-3a7b505afd9b"
+            name="Location"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="bd73b6dd-0dce-4655-870d-8eda59bdded1"
+            name="Owner"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2882028a-6692-4b00-839b-3e10a1b06332"
+        name="RealtyInvestUser"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="29c6e40f-f092-467d-9941-ed336d5174cd"
+            name="UserName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="38117a3a-bc2d-40e4-979d-b9a2fa22062c"
+            name="Email"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="7cd03110-91d8-4db9-9269-6bd1e12e8d8b"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="27b10ee2-f6cd-4be1-af84-32e91c78be62"
+            name="Roles"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3b17d440-bf50-4b2a-bea9-9b8f8e8fc175"
+        name="Transaction"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="38b7b01c-f997-4982-abdd-54cd65bcbba8">
+            <enumerationMoniker
+              Id="916532b8-5aa3-416d-bcda-929860b782ab"
+              LastKnownName="TransactionType"
+              LastKnownLocation="RealtyInvest.Modeling.uml" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="732e1cec-bd90-4442-a36e-d728fa2a77df"
+            isDerived="false"
+            sourceEndRoleName="Transaction"
+            targetEndRoleName="RealtyInvestUser"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="2882028a-6692-4b00-839b-3e10a1b06332"
+              LastKnownName="RealtyInvestUser"
+              LastKnownLocation="RealtyInvest.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="533dfff0-e371-49a5-a1b2-6b7194fea2df"
+                  name="Transaction"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="4f8e2747-1964-49eb-acb1-071d07895eec"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="368e124c-dd3f-4ded-b7ca-8d67633b670e"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e21394ad-df53-4b77-bd5e-0b29afb55d54"
+                  name="RealtyInvestUser"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="2825ec68-27c4-47ab-9ff8-39bf532e0b88"
+            isDerived="false"
+            sourceEndRoleName="Transaction"
+            targetEndRoleName="RealtyInvestUser"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="2882028a-6692-4b00-839b-3e10a1b06332"
+              LastKnownName="RealtyInvestUser"
+              LastKnownLocation="RealtyInvest.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7a9fd4e2-376d-4aef-983e-6cc706bbd7cf"
+                  name="Transaction"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a974656d-3e56-4c8b-bfc6-4564e6cb91a8"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="6ab412c0-d0c2-42b3-ab89-eae5872bb951"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="23c4a525-a63c-4a68-a368-5dd4bba7a7ce"
+                  name="RealtyInvestUser"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="cbfd0a8b-66b0-4fd1-9eb2-f5b6cfc10e5f"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="bc4ed764-5413-4993-b740-c335f0003110"
+            name="Volume"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="b25f0bff-76a9-4023-8f9f-a0df8b0ce0d3"
+            name="Type"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="9aec70f3-5d1a-43ed-aebc-74f4c7b29e9e"
+            name="Date"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="f7ba761f-ecc0-416d-88fc-2aa791d47e30"
+            name="Owner"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d70b887a-9de4-4121-9a70-d8f65c86a81a"
+            name="Investor"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="51175516-e155-443c-9003-c6b36a4f07cc"
+        name="Role"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="ad98344e-01d4-440a-8df9-c8bce1abd148"
+            isDerived="false"
+            sourceEndRoleName="Role"
+            targetEndRoleName="RealtyInvestUser"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="2882028a-6692-4b00-839b-3e10a1b06332"
+              LastKnownName="RealtyInvestUser"
+              LastKnownLocation="RealtyInvest.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="df825b86-f2f0-4b28-9812-c0a53dbd295e"
+                  name="Role"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="618a6404-d9dc-47aa-ae9c-884927a13ea9"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="55d29f85-cfa7-4990-892b-5cf4b4e99420"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="37bcff8a-368a-4b19-bdf0-1bb0b5c815e2"
+                  name="RealtyInvestUser"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="0843e3c2-583f-4f54-bc7e-fdc2e1568743"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="28f6064b-a9be-4617-a976-7a0c2e43aa3d"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="4b9a514e-6eb2-40fb-8398-5d1a2b04928b"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="c72e9402-1017-4728-8be5-029036a24343"
+            name="RoleName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="916532b8-5aa3-416d-bcda-929860b782ab"
+        name="TransactionType"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="589d9790-a4cb-4547-9449-e66d78aa6853"
+            name="Buy" />
+          <enumerationLiteral
+            Id="80ce4a0f-afa7-4765-a4dd-36068b936cf4"
+            name="Sail" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="0c426290-1a87-4bd7-b581-b8d7143adb54"
+        name="IRepository"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="855f1adf-52e5-4556-9e70-4ea5d4d8c801"
+            name="GetById"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ed947791-752f-4f2f-90ca-52fa49e8b39b"
+            name="Find"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="23aed100-b170-41ea-bafd-64eca1bc04f4"
+            name="All"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="c7df3502-e1b6-4cf5-b255-18cd0ca11581"
+            name="All"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a2fb3135-4956-4803-8259-30c8c907eb80"
+                  name="query"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b68df410-fa19-4eab-88cf-ba919358ffa6"
+            name="Add"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="2998f3f8-3788-4e50-9ff3-45cc56d5cc25"
+            name="Delete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="52b20a12-0249-4ba8-b173-34001776fda7"
+            name="Save"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ed840bf1-6f71-49f2-84ad-c6d690137004"
+            name="Update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="47c293e1-ae1d-42b0-976f-57cab9859d40"
+                  name="entity"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="211b933e-510a-4fa2-bb7e-f99e72202071"
+        name="IRealEstateRepository"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="4061e6ad-d5bd-49df-9950-a202bc4f4499"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="0c426290-1a87-4bd7-b581-b8d7143adb54"
+              LastKnownName="IRepository"
+              LastKnownLocation="RealtyInvest.Modeling.uml" />
+          </generalization>
+        </generalsInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="61125728-f29d-46c1-8b1c-b73934726897"
+        name="Interface3"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2ee3db12-6a8d-40c8-b3e3-af1da7c0ca27"
+        name="RealEstateRepository"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="ca5893eb-40f4-4eea-9515-34b2138daa65">
+            <interfaceMoniker
+              Id="211b933e-510a-4fa2-bb7e-f99e72202071"
+              LastKnownName="IRealEstateRepository"
+              LastKnownLocation="RealtyInvest.Modeling.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="219b6ba1-a9b7-4496-9c98-0ef20b498c0a"
+            isDerived="false"
+            sourceEndRoleName="RealEstateRepository"
+            targetEndRoleName="IForecastService"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="0a66df04-771e-4bbd-a0b7-02a4c205e12f"
+              LastKnownName="IForecastService"
+              LastKnownLocation="RealtyInvest.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5b22a212-839b-4535-9c62-133044cb256b"
+                  name="RealEstateRepository"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="749cefcd-4026-48dd-9fe4-b3eeccf7a178"
+                  name="IForecastService"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="15b857b5-7eec-4189-a977-0a003ebe4abb"
+            name="GetById"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="45eb9021-a832-4b19-acd7-482045fcce67"
+            name="Find"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="6e248891-d4a3-4d12-844a-07694781cd69"
+            name="All"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="720ab1eb-39a0-45f8-9bde-f4e17b107498"
+            name="All"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b19f5f28-5c7c-42d0-a60b-a1ee67214ae2"
+                  name="query"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1bf2f215-5532-4f65-8d2c-39f099184860"
+            name="Add"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="8fc5cfc5-2795-4df8-bc39-0680670c6a66"
+            name="Delete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f0d22f76-b4d1-44f7-9f76-4c351de2d0b6"
+            name="Save"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="d765feaf-673e-49b4-b93f-0df40d12a24b"
+            name="Update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="af692d93-099c-4c36-afe3-85a124ce9468"
+                  name="entity"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="4f6339fb-ff05-42cc-8fec-49137363deb9"
+        name="IForecastDataProvider"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="a8dc87d7-3fef-4d73-8d08-7cb3b5bd3308"
+            name="GetPriceHistory"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="0a66df04-771e-4bbd-a0b7-02a4c205e12f"
+        name="IForecastService"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="9cad2a8a-17bc-4fc7-bdeb-25b3cc3c6b8a"
+            isDerived="false"
+            sourceEndRoleName="IForecastService"
+            targetEndRoleName="IForecastDataProvider"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="4f6339fb-ff05-42cc-8fec-49137363deb9"
+              LastKnownName="IForecastDataProvider"
+              LastKnownLocation="RealtyInvest.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4bce1d58-38f2-40ac-b3d1-a390031de166"
+                  name="IForecastService"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="efc2b7ca-e7a5-40b6-a7e6-d8a0707467f3"
+                  name="IForecastDataProvider"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperations>
+          <operation
+            Id="78ce4b7f-39fb-4c0f-b215-ee5c13be75da"
+            name="GetLandPriceForecast"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="287d2815-2327-49b2-b07d-4e4e8a689aac"
+                  name="period"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="aa3677ff-7843-4685-bd03-2687ee3e2c2e"
+        name="ForecastService"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="fe841c87-523a-42fc-b0d9-3645ed0956c2">
+            <interfaceMoniker
+              Id="0a66df04-771e-4bbd-a0b7-02a4c205e12f"
+              LastKnownName="IForecastService"
+              LastKnownLocation="RealtyInvest.Modeling.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="ecbe2677-2d60-4281-adee-0788b0495bd1"
+            name="GetLandPriceForecast"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bbfe92c2-c70e-4d7b-9424-1d48a2554a63"
+                  name="period"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="474a71dc-0c53-4318-9f9b-bd0c1c6786fe"
+        name="RealtyInvest.UMLActivity"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="aefea62f-e2ef-419e-81b0-9d29a1f54a49"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="67d107fe-ae3c-4892-822a-27bd77f14be7"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="3ed78472-19bc-4f98-ad08-c6e659fb1aee"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="RealtyInvest.Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode
+            Id="294a14fe-d0ac-4cc3-a55d-c262379a2e62"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="272065a7-5827-4abb-b789-a4f56a855427"
+            name="Вхід під акаунтом власника\експерта"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ae4d1ff2-0e60-484b-829f-90fa1f6a6c14"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="5cf1c138-8032-48b2-a8d8-f8f998b37410"
+                  LastKnownName="Перехід до аналітичної панелі"
+                  LastKnownLocation="RealtyInvest.Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="5cf1c138-8032-48b2-a8d8-f8f998b37410"
+            name="Перехід до аналітичної панелі"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2cd99967-ec88-4243-8899-433d733c63cd"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="f9cc6fae-d40a-4064-9e70-ad878e82479e"
+                  LastKnownName="Fork1"
+                  LastKnownLocation="RealtyInvest.Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="77ea3cc6-c9fe-4de0-9dda-df20b33d36dd"
+            name="Вхід під акаунтом інвестора"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="6724409e-2a33-4fcc-b1fc-87a6c8f047f8"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="294a14fe-d0ac-4cc3-a55d-c262379a2e62"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="RealtyInvest.Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="3ed78472-19bc-4f98-ad08-c6e659fb1aee"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1882d67d-bc3a-4a56-bc51-ea0f9dd4720b"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="272065a7-5827-4abb-b789-a4f56a855427"
+                  LastKnownName="Вхід під акаунтом власника\експерта"
+                  LastKnownLocation="RealtyInvest.Modeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="86be19ea-f2b1-43a2-a687-6f9cc02f76a0"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="77ea3cc6-c9fe-4de0-9dda-df20b33d36dd"
+                  LastKnownName="Вхід під акаунтом інвестора"
+                  LastKnownLocation="RealtyInvest.Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="f7d206b5-dc07-4fb4-a52f-e28c224177c0"
+            name="Завантаження данних із серверу"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="92cd9027-fadb-4d2b-8b94-4c0b858fdad2"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="7b835f73-c806-46bd-a544-7da2186572cf"
+                  LastKnownName="Адаптивна множинна регресія"
+                  LastKnownLocation="RealtyInvest.Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="176db905-aeaf-4707-97c1-5edb34166cea"
+            name="Ініціалізація коєфіцієнтів"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4f0f3d5a-c6de-4251-b8b1-51d9cf01eaa6"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="7b835f73-c806-46bd-a544-7da2186572cf"
+                  LastKnownName="Адаптивна множинна регресія"
+                  LastKnownLocation="RealtyInvest.Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode
+            Id="f9cc6fae-d40a-4064-9e70-ad878e82479e"
+            name="Fork1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ba4681fa-7821-4d0f-8eea-5be142543021"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="f7d206b5-dc07-4fb4-a52f-e28c224177c0"
+                  LastKnownName="Завантаження данних із серверу"
+                  LastKnownLocation="RealtyInvest.Modeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="00f23f85-1699-4858-98aa-727ba3bf39b4"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="176db905-aeaf-4707-97c1-5edb34166cea"
+                  LastKnownName="Ініціалізація коєфіцієнтів"
+                  LastKnownLocation="RealtyInvest.Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction
+            Id="7b835f73-c806-46bd-a544-7da2186572cf"
+            name="Адаптивна множинна регресія"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="26fc1a8e-c2f7-4612-9975-95edfaa7f28d"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="d6e779d3-8ada-417f-a306-ed22570e27db"
+                  LastKnownName="Fork11"
+                  LastKnownLocation="RealtyInvest.Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="e03b60cf-ceef-4712-bd85-016fd87f3410"
+            name="Вивід даних через браузер"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="9b83560d-4cf6-47b6-b598-b85d88d60a63"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="294a14fe-d0ac-4cc3-a55d-c262379a2e62"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="RealtyInvest.Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="ecdd1005-588b-4ad7-8a5c-e6fb32a4e7bd"
+            name="Збереження до БД прогнозу"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ff44cd50-db3c-440c-8b09-cf2a2e8a8276"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="294a14fe-d0ac-4cc3-a55d-c262379a2e62"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="RealtyInvest.Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode
+            Id="d6e779d3-8ada-417f-a306-ed22570e27db"
+            name="Fork11"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="10644455-18ea-4135-8b49-149b45659175"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="e03b60cf-ceef-4712-bd85-016fd87f3410"
+                  LastKnownName="Вивід даних через браузер"
+                  LastKnownLocation="RealtyInvest.Modeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="3a27f996-5f95-4051-aa6a-d2abf39147c8"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="ecdd1005-588b-4ad7-8a5c-e6fb32a4e7bd"
+                  LastKnownName="Збереження до БД прогнозу"
+                  LastKnownLocation="RealtyInvest.Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

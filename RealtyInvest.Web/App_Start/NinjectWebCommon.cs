@@ -1,21 +1,19 @@
+using System;
+using System.Web;
+using Microsoft.Web.Infrastructure.DynamicModuleHelper;
+using Ninject;
+using Ninject.Web.Common;
 using RealtyInvest.Core.Services;
 using RealtyInvest.Core.Services.Impl;
 using RealtyInvest.DataModel.UnitsOfWorks;
 using RealtyInvest.DataModel.UnitsOfWorks.Impl;
+using RealtyInvest.Web;
 
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(RealtyInvest.Web.App_Start.NinjectWebCommon), "Start")]
-[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(RealtyInvest.Web.App_Start.NinjectWebCommon), "Stop")]
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(NinjectWebCommon), "Start")]
+[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(NinjectWebCommon), "Stop")]
 
-namespace RealtyInvest.Web.App_Start
+namespace RealtyInvest.Web
 {
-    using System;
-    using System.Web;
-
-    using Microsoft.Web.Infrastructure.DynamicModuleHelper;
-
-    using Ninject;
-    using Ninject.Web.Common;
-
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
@@ -70,6 +68,7 @@ namespace RealtyInvest.Web.App_Start
             //Services
             kernel.Bind<IRealtySearchService>().To<RealtySearchService>();
             kernel.Bind<IManagementService>().To<ManagementService>();
+            kernel.Bind<IForecastDataProvider>().To<ForecastDataProvider>();
             kernel.Bind<IForecastService>().To<ForecastService>();
         }        
     }

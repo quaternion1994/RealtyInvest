@@ -6,6 +6,6 @@ namespace RealtyInvest.Core.Services
 {
     public interface IForecastService
     {
-        ServiceResult<ChartPoint[]> GetLandPriceForecast(HistoryPeriod period);
+        ServiceResult<ChartPoint[]> GetLandPriceForecast(HistoryPeriod period, string src);
     }
 }

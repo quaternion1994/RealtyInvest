@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="de25d8bd-4e5c-4e32-a7eb-abb7373871d6" name="RealtyInvest.UMLActivity" linkedPackageId="051693b7-6779-40b7-bade-71f3533a82ea" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="49999d4e-292d-412f-bed3-e503f97937e4">
+      <elementDefinition Id="2ab721fb-4443-4694-8ead-51700040c12e" />
+      <body>Диаграма діяльності аналізу ціни</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="898d3368-3b5a-4016-8baa-c758a0dcbfcf">
+      <profileInstance Id="4ff0504e-4ab4-441f-8084-0678ba540adc" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="7917e08e-ab2c-4e74-82e1-ceba9c5818f3">
+      <profileInstance Id="e9467926-6092-423c-87d4-352d82047dc6" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="0c27efbc-d94d-4ce4-a858-984db989167f" name="RealtyInvest.UMLActivity" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="474a71dc-0c53-4318-9f9b-bd0c1c6786fe" />
+        <nodes>
+          <initialNode Id="0dece945-6fa2-47d9-a118-8556f4a48667" name="Initial1" isLeaf="false">
+            <elementDefinition Id="aefea62f-e2ef-419e-81b0-9d29a1f54a49" />
+            <flowNodeTargets>
+              <controlFlow Id="ea1b892f-dad6-4c48-ac28-7cdc46adf306" isLeaf="false">
+                <decisionNodeMoniker Id="e35889d8-d3b9-47c3-b293-c206e78fef09" LastKnownName="Decision1" />
+                <elementDefinition Id="67d107fe-ae3c-4892-822a-27bd77f14be7" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode Id="b88d644b-88d2-482d-b1be-02ce5e6a96cc" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="294a14fe-d0ac-4cc3-a55d-c262379a2e62" />
+          </activityFinalNode>
+          <opaqueAction Id="2bd042b1-7090-4f0f-b92b-fac81f8847a0" name="Вхід під акаунтом власника\експерта" isLeaf="false">
+            <elementDefinition Id="272065a7-5827-4abb-b789-a4f56a855427" />
+            <flowNodeTargets>
+              <controlFlow Id="8e90258f-c67e-48f0-9208-4004e2704605" isLeaf="false">
+                <opaqueActionMoniker Id="7de5ec4d-6423-4865-b2ed-a7fa638e28de" LastKnownName="Перехід до аналітичної панелі" />
+                <elementDefinition Id="ae4d1ff2-0e60-484b-829f-90fa1f6a6c14" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="7de5ec4d-6423-4865-b2ed-a7fa638e28de" name="Перехід до аналітичної панелі" isLeaf="false">
+            <elementDefinition Id="5cf1c138-8032-48b2-a8d8-f8f998b37410" />
+            <flowNodeTargets>
+              <controlFlow Id="0921ea3f-3046-487f-83e5-25303f46abc1" isLeaf="false">
+                <forkNodeMoniker Id="0d2e9803-c210-4b11-a20a-a7f743262313" LastKnownName="Fork1" />
+                <elementDefinition Id="2cd99967-ec88-4243-8899-433d733c63cd" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="8ed32488-d96f-4fde-951e-70c580e7c23c" name="Вхід під акаунтом інвестора" isLeaf="false">
+            <elementDefinition Id="77ea3cc6-c9fe-4de0-9dda-df20b33d36dd" />
+            <flowNodeTargets>
+              <controlFlow Id="c41f6596-28df-4bf2-be48-d4401acb4b1b" isLeaf="false">
+                <activityFinalNodeMoniker Id="b88d644b-88d2-482d-b1be-02ce5e6a96cc" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="6724409e-2a33-4fcc-b1fc-87a6c8f047f8" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="e35889d8-d3b9-47c3-b293-c206e78fef09" name="Decision1" isLeaf="false">
+            <elementDefinition Id="3ed78472-19bc-4f98-ad08-c6e659fb1aee" />
+            <flowNodeTargets>
+              <controlFlow Id="de3b09e3-3c40-43ff-a223-9c4d2c27b6bf" isLeaf="false">
+                <opaqueActionMoniker Id="2bd042b1-7090-4f0f-b92b-fac81f8847a0" LastKnownName="Вхід під акаунтом власника\експерта" />
+                <elementDefinition Id="1882d67d-bc3a-4a56-bc51-ea0f9dd4720b" />
+              </controlFlow>
+              <controlFlow Id="08b3cf40-bbe0-479f-a7ff-ec89e0581c52" isLeaf="false">
+                <opaqueActionMoniker Id="8ed32488-d96f-4fde-951e-70c580e7c23c" LastKnownName="Вхід під акаунтом інвестора" />
+                <elementDefinition Id="86be19ea-f2b1-43a2-a687-6f9cc02f76a0" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="759597e6-e343-459e-8b4c-895d4ad7c801" name="Завантаження данних із серверу" isLeaf="false">
+            <elementDefinition Id="f7d206b5-dc07-4fb4-a52f-e28c224177c0" />
+            <flowNodeTargets>
+              <controlFlow Id="f7bb6b1b-3d92-42e1-baf1-36234990b608" isLeaf="false">
+                <opaqueActionMoniker Id="cf669bb1-9f2f-45c9-b1f7-0d9f23d5c64f" LastKnownName="Адаптивна множинна регресія" />
+                <elementDefinition Id="92cd9027-fadb-4d2b-8b94-4c0b858fdad2" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="c1aa20fa-edcd-418b-98b0-35506a8a6378" name="Ініціалізація коєфіцієнтів" isLeaf="false">
+            <elementDefinition Id="176db905-aeaf-4707-97c1-5edb34166cea" />
+            <flowNodeTargets>
+              <controlFlow Id="dc94210e-c2c3-4a3e-bbb5-e3dede4ebffa" isLeaf="false">
+                <opaqueActionMoniker Id="cf669bb1-9f2f-45c9-b1f7-0d9f23d5c64f" LastKnownName="Адаптивна множинна регресія" />
+                <elementDefinition Id="4f0f3d5a-c6de-4251-b8b1-51d9cf01eaa6" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode Id="0d2e9803-c210-4b11-a20a-a7f743262313" name="Fork1" isLeaf="false">
+            <elementDefinition Id="f9cc6fae-d40a-4064-9e70-ad878e82479e" />
+            <flowNodeTargets>
+              <controlFlow Id="845c90ff-07b3-4bbb-a6ac-e0c69f17e3fe" isLeaf="false">
+                <opaqueActionMoniker Id="759597e6-e343-459e-8b4c-895d4ad7c801" LastKnownName="Завантаження данних із серверу" />
+                <elementDefinition Id="ba4681fa-7821-4d0f-8eea-5be142543021" />
+              </controlFlow>
+              <controlFlow Id="f572b005-b8eb-4bc4-846b-dff8dfcb7181" isLeaf="false">
+                <opaqueActionMoniker Id="c1aa20fa-edcd-418b-98b0-35506a8a6378" LastKnownName="Ініціалізація коєфіцієнтів" />
+                <elementDefinition Id="00f23f85-1699-4858-98aa-727ba3bf39b4" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction Id="cf669bb1-9f2f-45c9-b1f7-0d9f23d5c64f" name="Адаптивна множинна регресія" isLeaf="false">
+            <elementDefinition Id="7b835f73-c806-46bd-a544-7da2186572cf" />
+            <flowNodeTargets>
+              <controlFlow Id="a553eb6a-5959-4fdc-9e5a-876ae77c7df6" isLeaf="false">
+                <forkNodeMoniker Id="6aded892-3a2e-4d54-92fb-c233f4c1959b" LastKnownName="Fork11" />
+                <elementDefinition Id="26fc1a8e-c2f7-4612-9975-95edfaa7f28d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="78d1dff5-1cb0-472c-8d65-d458fd104604" name="Вивід даних через браузер" isLeaf="false">
+            <elementDefinition Id="e03b60cf-ceef-4712-bd85-016fd87f3410" />
+            <flowNodeTargets>
+              <controlFlow Id="47422e63-d8b7-4f4b-afe7-cfb8d3679798" isLeaf="false">
+                <activityFinalNodeMoniker Id="b88d644b-88d2-482d-b1be-02ce5e6a96cc" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="9b83560d-4cf6-47b6-b598-b85d88d60a63" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="ceaa9c39-e131-4ac5-b1bf-03071e9c2478" name="Збереження до БД прогнозу" isLeaf="false">
+            <elementDefinition Id="ecdd1005-588b-4ad7-8a5c-e6fb32a4e7bd" />
+            <flowNodeTargets>
+              <controlFlow Id="773ff30d-13f3-4ac5-8a81-4550e70e4f55" isLeaf="false">
+                <activityFinalNodeMoniker Id="b88d644b-88d2-482d-b1be-02ce5e6a96cc" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="ff44cd50-db3c-440c-8b09-cf2a2e8a8276" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode Id="6aded892-3a2e-4d54-92fb-c233f4c1959b" name="Fork11" isLeaf="false">
+            <elementDefinition Id="d6e779d3-8ada-417f-a306-ed22570e27db" />
+            <flowNodeTargets>
+              <controlFlow Id="14429017-2b12-40dc-a68e-403815b50367" isLeaf="false">
+                <opaqueActionMoniker Id="78d1dff5-1cb0-472c-8d65-d458fd104604" LastKnownName="Вивід даних через браузер" />
+                <elementDefinition Id="10644455-18ea-4135-8b49-149b45659175" />
+              </controlFlow>
+              <controlFlow Id="eca6c07b-1f7c-4ded-84ee-19046f5fa5ba" isLeaf="false">
+                <opaqueActionMoniker Id="ceaa9c39-e131-4ac5-b1bf-03071e9c2478" LastKnownName="Збереження до БД прогнозу" />
+                <elementDefinition Id="3a27f996-5f95-4051-aa6a-d2abf39147c8" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="051693b7-6779-40b7-bade-71f3533a82ea" name="RealtyInvest.Modeling">
+    <elementDefinition Id="aeecb088-0929-4a26-8116-942525820e2f" />
+  </package>
+</activityRootModel>

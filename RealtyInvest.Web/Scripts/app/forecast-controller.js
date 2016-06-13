@@ -16,7 +16,7 @@ function forecastCtrl($scope, $http, forecastsettings) {
         $scope.chart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: $.map(data, function (val, i) { return moment(val.X).format("MMM Do YY"); }),
+                labels: $.map(data, function (val, i) { return val.X }), //.format("MMM Do YY");
                 datasets: [{
                     backgroundColor: "rgba(0,200,132,0.2)",
                     label: 'Price',

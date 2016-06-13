@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="RealtyInvest">
+  <useCaseModelRootMoniker Id="b70cae49-3ee6-47d2-bb43-376494e720cc" />
+  <nestedChildShapes>
+    <actorShape Id="152afdc1-6a1a-4448-b871-cf3a700115e9" absoluteBounds="6, 1, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="6064c620-4f59-4602-bcfd-403a11e58c76" LastKnownName="Власник\Експерт" />
+      <relativeChildShapes />
+    </actorShape>
+    <actorShape Id="0efdb176-7a18-44b7-bf16-0c403a92bfaa" absoluteBounds="0.625, 3.5, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="56b79f3d-f9b5-43a4-9e50-ee33eda5b2ea" LastKnownName="Інвестор" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="c3e5e30e-8564-4e91-beab-1f7b96b2dc33" absoluteBounds="0.875, 1.875, 1.625, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="ac5f45c9-1824-474c-80f8-c964bf506874" LastKnownName="Купівля\Продаж певної площі" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(1 : 3.5); (1.56395353779367 : 2.37209292441265)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="68f7e28d-8bc5-4993-adc4-0ec7742f6470" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="0efdb176-7a18-44b7-bf16-0c403a92bfaa" />
+        <useCaseShapeMoniker Id="c3e5e30e-8564-4e91-beab-1f7b96b2dc33" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="ba53eb86-6848-4060-8539-9a5473adeff2" absoluteBounds="4.875, 3.375, 1.5, 0.625" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="33aab363-4fd3-40ad-9f35-7384f5836bdb" LastKnownName="Прогнозування ціни на землю" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(6.18589743589744 : 1.5); (5.70467478043863 : 3.37676835628933)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="3340906e-d3cf-4d2d-a94b-bc79feeaaa53" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="152afdc1-6a1a-4448-b871-cf3a700115e9" />
+        <useCaseShapeMoniker Id="ba53eb86-6848-4060-8539-9a5473adeff2" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="529af41f-aca6-4829-9a04-970792506b7c" absoluteBounds="2.125, 0.75, 1.5, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="80f486ab-7b79-45fb-8272-c169cf0d203c" LastKnownName="Купівля\Продаж" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseGeneralizationConnector edgePoints="[(2.6260703413068 : 1.23582809770935); (1.9384830832843 : 1.88722655267804)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110">
+      <generalizationMoniker Id="cd481b17-09f0-4e3b-8d7c-fa109da28603" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="529af41f-aca6-4829-9a04-970792506b7c" />
+        <useCaseShapeMoniker Id="c3e5e30e-8564-4e91-beab-1f7b96b2dc33" />
+      </nodes>
+    </useCaseGeneralizationConnector>
+    <useCaseAssociationConnector edgePoints="[(6 : 1.23148148148148); (3.60714029513796 : 1.05423261445466)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="5318dea7-8785-4f8d-8277-3a0c98a8e1a0" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="152afdc1-6a1a-4448-b871-cf3a700115e9" />
+        <useCaseShapeMoniker Id="529af41f-aca6-4829-9a04-970792506b7c" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="7ca9ad95-ab65-4cc2-ab45-8a462da2a636" absoluteBounds="3, 1.875, 1.625, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="e1c6e52f-759c-44ba-9db9-72ad7787aa08" LastKnownName="Купівля\Продаж землі" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseGeneralizationConnector edgePoints="[(3.07573289783957 : 1.24087947740749); (3.61069502790749 : 1.88283403348899)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110">
+      <generalizationMoniker Id="3cf9bd3e-2aff-46dc-a174-3b1f1c91c424" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="529af41f-aca6-4829-9a04-970792506b7c" />
+        <useCaseShapeMoniker Id="7ca9ad95-ab65-4cc2-ab45-8a462da2a636" />
+      </nodes>
+    </useCaseGeneralizationConnector>
+    <useCaseShape Id="2a96247a-6e09-42aa-b026-1c606f3f08a5" absoluteBounds="2.5, 3.375, 1.875, 0.625" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="b3be0555-78d5-4bdb-8878-76fa2ac8bee7" LastKnownName="Стоврення\Редагування\Видалення нерухомості" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(6 : 1.46666666666667); (3.77404288685206 : 3.39582949806154)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="7e984626-a47a-4ee5-a43c-38ad0fe976f8" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="152afdc1-6a1a-4448-b871-cf3a700115e9" />
+        <useCaseShapeMoniker Id="2a96247a-6e09-42aa-b026-1c606f3f08a5" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="d3eaeb38-045d-497c-8cb3-567cc63cbd02" absoluteBounds="6, 4.75, 1, 0.75" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="2eb632af-1c56-46e0-8e7b-862730b53f1c" LastKnownName="Множинна адаптивна регресія" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(5.8093797179966 : 3.9904095367087); (6.29235382520518 : 4.78386699855136)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="72f06ef9-4e71-45c4-82f7-8ed3c1a96cf4" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="ba53eb86-6848-4060-8539-9a5473adeff2" />
+        <useCaseShapeMoniker Id="d3eaeb38-045d-497c-8cb3-567cc63cbd02" />
+      </nodes>
+    </includeConnector>
+    <useCaseShape Id="f11da7ca-5403-43db-8ee5-b55e14cc0fed" absoluteBounds="3.875, 4.875, 1, 0.75" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="e92bb74f-78df-4e61-b8e3-baa91f1363f3" LastKnownName="Збір даних з інших джерел" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(5.38782917548737 : 3.98396353064079); (4.63224787771376 : 4.9284401528578)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="eb371f63-f08c-4258-aa70-3270c98c4719" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="ba53eb86-6848-4060-8539-9a5473adeff2" />
+        <useCaseShapeMoniker Id="f11da7ca-5403-43db-8ee5-b55e14cc0fed" />
+      </nodes>
+    </includeConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

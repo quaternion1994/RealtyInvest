@@ -8,9 +8,11 @@ namespace RealtyInvest.DataModel.Models
 {
     public class RawPriceHistory
     {
-        public DateTime Time { get; set; }
-        public int Fact1 { get; set; }
-        public int Fact2 { get; set; }
-        public int Fact3 { get; set; }
+        public double Time { get; set; }
+        public double Fact1 { get; set; }
+        public double Fact2 { get; set; }
+        public double Fact3 { get; set; }
+        public double Fact4 { get; set; }
+        public double Price { get; set; }
     }
 }

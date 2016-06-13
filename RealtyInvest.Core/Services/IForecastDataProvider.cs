@@ -5,6 +5,6 @@ namespace RealtyInvest.Core.Services
 {
     public interface IForecastDataProvider
     {
-        LinkedList<RawPriceHistory> GetPriceHistory();
+        RawPriceHistory[] GetPriceHistory(string filename);
     }
 }

@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="b70cae49-3ee6-47d2-bb43-376494e720cc" name="RealtyInvest" linkedPackageId="4f41ea2c-9549-41c4-a816-2d4187dee428" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="c2c6a5d4-8d35-443a-9e2b-a4d9a8068d36">
+      <profileInstance Id="f3f794c5-831a-442f-af45-0d3aac95c560" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="e51bd6ab-b1dc-4116-8aa5-10b718e84bcc">
+      <profileInstance Id="c10b85e2-ac66-4919-88f2-3b7c7b3891cc" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="6064c620-4f59-4602-bcfd-403a11e58c76" name="Власник\Експерт" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="70b1ea04-3f81-4130-b7b3-ecbcb7913512" />
+        <targetEnds>
+          <association Id="5318dea7-8785-4f8d-8277-3a0c98a8e1a0" isDerived="false" sourceEndRoleName="Власник\Експерт" targetEndRoleName="Купівля\Продаж" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="80f486ab-7b79-45fb-8272-c169cf0d203c" LastKnownName="Купівля\Продаж" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a6c7090b-0b03-4ef2-a452-20fd6b3911c7" name="Власник\Експерт" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8fbd987c-27c9-45cf-bec1-710530eb99b9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d986316f-f0f9-46f0-a2d5-b81edd4048fa" name="Купівля\Продаж" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b578c991-838e-4a43-a592-700e2044a3eb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f35d6431-545c-411d-b4ef-24dfdc4b2693" />
+          </association>
+          <association Id="3340906e-d3cf-4d2d-a94b-bc79feeaaa53" isDerived="false" sourceEndRoleName="Власник\Експерт" targetEndRoleName="Прогнозування ціни на землю" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="33aab363-4fd3-40ad-9f35-7384f5836bdb" LastKnownName="Прогнозування ціни на землю" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f389cc3c-66fd-44a0-8d94-3db5a73cf18e" name="Власник\Експерт" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="91660c4e-3b55-4c8a-bdde-dafeda9757c5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="86964567-e49a-4724-9406-562dc4191048" name="Прогнозування ціни на землю" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7f786c00-8fa6-4dba-ab0a-3a631f9c009d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="cef84c0c-a8fb-4fc2-a4c1-b527d9606ff4" />
+          </association>
+          <association Id="7e984626-a47a-4ee5-a43c-38ad0fe976f8" isDerived="false" sourceEndRoleName="Власник\Експерт" targetEndRoleName="Стоврення\Редагування\Видалення нерухомості" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b3be0555-78d5-4bdb-8878-76fa2ac8bee7" LastKnownName="Стоврення\Редагування\Видалення нерухомості" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c6a3b6b4-c0d1-4420-9ffb-276d8033c186" name="Власник\Експерт" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7507e772-e345-48eb-ad8f-680c0f9118ea" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cc06dabb-be70-4306-ba8c-fe01e79cefc9" name="Стоврення\Редагування\Видалення нерухомості" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="020d3831-a3ae-4a04-b523-285c0d1ef4cd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4ffbae0a-13c3-4737-9da7-5ceba8b60d78" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="56b79f3d-f9b5-43a4-9e50-ee33eda5b2ea" name="Інвестор" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="13bfb65c-6bd3-4584-9ec6-b1c046b046de" />
+        <targetEnds>
+          <association Id="68f7e28d-8bc5-4993-adc4-0ec7742f6470" isDerived="false" sourceEndRoleName="Інвестор" targetEndRoleName="Інвестування" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ac5f45c9-1824-474c-80f8-c964bf506874" LastKnownName="Купівля\Продаж певної площі" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="82dde809-4851-4caf-bc29-7f430a091123" name="Інвестор" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a8172c00-2fd7-402e-87ae-e98b7acceea8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f4f0e759-95ed-4ebf-a1ab-7c435484e03b" name="Інвестування" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="95b691db-7276-493c-a2ab-f17030e4d833" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="cfeeee18-5963-418f-a202-524842a54163" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ac5f45c9-1824-474c-80f8-c964bf506874" name="Купівля\Продаж певної площі" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="089d0ab8-b1ff-4092-b4e6-abb1260e1bad" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="33aab363-4fd3-40ad-9f35-7384f5836bdb" name="Прогнозування ціни на землю" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="dbb9872a-8dba-402d-b4ab-096e0f769632" />
+        <additions>
+          <include Id="72f06ef9-4e71-45c4-82f7-8ed3c1a96cf4">
+            <useCaseMoniker Id="2eb632af-1c56-46e0-8e7b-862730b53f1c" LastKnownName="Множинна адаптивна регресія" />
+            <elementDefinition Id="23826dd9-52bd-4672-9ad0-8806cad7d882" />
+          </include>
+          <include Id="eb371f63-f08c-4258-aa70-3270c98c4719">
+            <useCaseMoniker Id="e92bb74f-78df-4e61-b8e3-baa91f1363f3" LastKnownName="Збір даних з інших джерел" />
+            <elementDefinition Id="1dd224d7-460b-4218-9f3f-6442139f865a" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="80f486ab-7b79-45fb-8272-c169cf0d203c" name="Купівля\Продаж" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c1adb673-5dee-40bb-aaf3-8810f339a66b" />
+        <generalsInternal>
+          <generalization Id="cd481b17-09f0-4e3b-8d7c-fa109da28603" isSubstitutable="false">
+            <useCaseMoniker Id="ac5f45c9-1824-474c-80f8-c964bf506874" LastKnownName="Купівля\Продаж певної площі" />
+            <elementDefinition Id="1ef1a7f1-4f2a-495a-9028-9c2f0b7d6c58" />
+          </generalization>
+          <generalization Id="3cf9bd3e-2aff-46dc-a174-3b1f1c91c424" isSubstitutable="false">
+            <useCaseMoniker Id="e1c6e52f-759c-44ba-9db9-72ad7787aa08" LastKnownName="Купівля\Продаж землі" />
+            <elementDefinition Id="c9ecaa75-4dd3-48ad-aec8-b87a2b74dea8" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e1c6e52f-759c-44ba-9db9-72ad7787aa08" name="Купівля\Продаж землі" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9aff0b36-b74c-4e43-ba47-b4bfe52dc08d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b3be0555-78d5-4bdb-8878-76fa2ac8bee7" name="Стоврення\Редагування\Видалення нерухомості" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3c100a8f-33e8-4e50-a52a-a6cbe18978d7" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2eb632af-1c56-46e0-8e7b-862730b53f1c" name="Множинна адаптивна регресія" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7c530ea1-3637-4ad8-a516-5ae41860cbf4" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e92bb74f-78df-4e61-b8e3-baa91f1363f3" name="Збір даних з інших джерел" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="af91c04d-688a-4c15-9567-8809c0a99bf1" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="4f41ea2c-9549-41c4-a816-2d4187dee428" name="RealtyInvest.Modeling">
+    <elementDefinition Id="aeecb088-0929-4a26-8116-942525820e2f" />
+  </package>
+</useCaseModelRoot>

@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="cb4714a6-c68f-4b8b-b350-ca846ba94d35" name="UMLClassDiagram" linkedPackageId="0ec72415-4478-4569-b653-937ca9ba3576" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6ff2d57e-95c0-4223-bbcb-eb506b56f16d" name="RealtyEstate" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a687864f-ee23-446f-92b3-841000590f03" />
+        <targetEnds>
+          <association Id="75718b16-de68-43e2-b985-45e9228cbc0b" isDerived="false" sourceEndRoleName="RealtyEstate" targetEndRoleName="User" isLeaf="false" isAbstract="false">
+            <classMoniker Id="fc16e271-4bbd-4c0a-81bc-01e515346d72" LastKnownName="RealtyInvestUser" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="42b50993-c797-4a99-b7d2-65208ac3ca39" name="RealtyEstate" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="49d13b94-865e-447e-8f59-aefa44109c44" name="Lower" value="*">
+                      <elementDefinition Id="2e4cc604-ef6e-4c14-af02-6af3e6f0444b" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="2b7b06a4-7f12-477e-93f1-26b9d93afdf0" name="Upper" value="*">
+                      <elementDefinition Id="9c1ddebd-66e9-4aa8-97f5-6d28ce03164f" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="1bdc06c5-2210-4aa6-a34d-6d3f4b30c787" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="79df13a6-6c41-4ead-a66a-6c121fa51218" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b81a2af0-b564-4bbf-9537-6ee1386a02dd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="485cdbc8-0240-41da-980f-ecbc952d7a6e" />
+          </association>
+          <association Id="a7446620-8806-4d8d-bb93-29109b93d99e" isDerived="false" sourceEndRoleName="RealtyEstate" targetEndRoleName="RealEstateRepository" isLeaf="false" isAbstract="false">
+            <classMoniker Id="09b38eac-7969-49c2-a640-c5b3d09e93fb" LastKnownName="RealEstateRepository" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="41846399-b503-4ff7-a5c5-26a4239081c8" name="RealtyEstate" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7069030a-b37f-4827-89ee-ef0a16eaaff0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bb4fd6d0-5107-4cd9-b40c-0cf13440d096" name="RealEstateRepository" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2e066b58-7ec1-4793-a5c4-75fbc2711480" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4882879d-e5c0-46fe-bd12-43ddad9bbf72" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="2262cb5b-6f58-4722-9178-57ff245f0519" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="93404942-1334-4f3a-817a-237ee37dcde8" />
+          </property>
+          <property Id="daf6feef-a6ec-47ea-8e16-86a6b40c3094" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f6e7fe24-c535-4dcb-a477-b8a6b9833e1b" />
+          </property>
+          <property Id="d36d11b7-72f0-41fa-8300-20f98817f4d2" name="Square" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="831afcf9-357b-490a-8c7f-d1243770a35b" />
+          </property>
+          <property Id="987cd910-8264-46df-86c6-898db47b3c3b" name="Description" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="63f34a78-baa7-42c1-a288-d0060ec65b33" />
+          </property>
+          <property Id="b8842c80-7374-40c6-b54a-e68066fc67c6" name="Price for a cm" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="dd2860c9-ab21-425d-ac3a-3406bdd77e0b" />
+          </property>
+          <property Id="e55c36ea-3325-4021-8acd-acd5a60cc805" name="Location" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c1d700fc-7a43-4170-8ce8-3a7b505afd9b" />
+          </property>
+          <property Id="b38f5a02-638b-42fc-86d0-7abf448e680c" name="Owner" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="bd73b6dd-0dce-4655-870d-8eda59bdded1" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="fc16e271-4bbd-4c0a-81bc-01e515346d72" name="RealtyInvestUser" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2882028a-6692-4b00-839b-3e10a1b06332" />
+        <ownedAttributesInternal>
+          <property Id="f431ef6c-6a38-4193-8ee1-405bb78ed44d" name="UserName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="29c6e40f-f092-467d-9941-ed336d5174cd" />
+          </property>
+          <property Id="105f0325-bb57-477b-8e4b-833dd2b70acb" name="Email" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="38117a3a-bc2d-40e4-979d-b9a2fa22062c" />
+          </property>
+          <property Id="f7430a00-77fb-40d8-a2b0-1aabf3188070" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7cd03110-91d8-4db9-9269-6bd1e12e8d8b" />
+          </property>
+          <property Id="91812714-e449-4784-8280-2a23a9da04f4" name="Roles" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="27b10ee2-f6cd-4be1-af84-32e91c78be62" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="292fb034-24bc-4d63-9839-25af51cfe843" name="Transaction" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3b17d440-bf50-4b2a-bea9-9b8f8e8fc175" />
+        <suppliersInternal>
+          <dependency Id="de806eee-d6dc-40b1-a65c-04ec076805fc">
+            <enumerationMoniker Id="719d9996-e7fa-46b7-bc4b-28e689996ed2" LastKnownName="TransactionType" />
+            <elementDefinition Id="38b7b01c-f997-4982-abdd-54cd65bcbba8" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="c42f7b64-c61c-4f82-ae74-3d0954068421" isDerived="false" sourceEndRoleName="Transaction" targetEndRoleName="RealtyInvestUser" isLeaf="false" isAbstract="false">
+            <classMoniker Id="fc16e271-4bbd-4c0a-81bc-01e515346d72" LastKnownName="RealtyInvestUser" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1a271f32-99e8-4ab1-b1ad-0455bd66d538" name="Transaction" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="e33aeeeb-1c8b-4a59-a299-c8b7a78c9c19" name="Lower" value="*">
+                      <elementDefinition Id="4f8e2747-1964-49eb-acb1-071d07895eec" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="e2f52ade-6fe4-4da6-b13b-9b3a361ecc6b" name="Upper" value="*">
+                      <elementDefinition Id="368e124c-dd3f-4ded-b7ca-8d67633b670e" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="533dfff0-e371-49a5-a1b2-6b7194fea2df" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d3dbc1a8-eef1-4c58-a1ec-b43e7966d537" name="RealtyInvestUser" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e21394ad-df53-4b77-bd5e-0b29afb55d54" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="732e1cec-bd90-4442-a36e-d728fa2a77df" />
+          </association>
+          <association Id="177a6115-28d6-4358-ab3f-0f84d8e3a1ed" isDerived="false" sourceEndRoleName="Transaction" targetEndRoleName="RealtyInvestUser" isLeaf="false" isAbstract="false">
+            <classMoniker Id="fc16e271-4bbd-4c0a-81bc-01e515346d72" LastKnownName="RealtyInvestUser" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ad8fd0f4-d294-43f1-bc57-8dec46022d55" name="Transaction" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="1e3b7465-c02d-409b-a990-a71a68a06dd1" name="Lower" value="*">
+                      <elementDefinition Id="a974656d-3e56-4c8b-bfc6-4564e6cb91a8" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="71e8bd8b-6e17-427f-bd9d-87adb51188b3" name="Upper" value="*">
+                      <elementDefinition Id="6ab412c0-d0c2-42b3-ab89-eae5872bb951" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="7a9fd4e2-376d-4aef-983e-6cc706bbd7cf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="432b3c6f-d37f-485f-b8cc-f46c69df1e24" name="RealtyInvestUser" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="23c4a525-a63c-4a68-a368-5dd4bba7a7ce" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2825ec68-27c4-47ab-9ff8-39bf532e0b88" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="65a493c6-d3db-40ab-885b-97b191351c06" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="cbfd0a8b-66b0-4fd1-9eb2-f5b6cfc10e5f" />
+          </property>
+          <property Id="f9ed69fb-b221-42fc-b916-f99546e85cff" name="Volume" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="bc4ed764-5413-4993-b740-c335f0003110" />
+          </property>
+          <property Id="fe4e4e34-99b8-48f2-b4ed-ff04728b29c3" name="Type" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b25f0bff-76a9-4023-8f9f-a0df8b0ce0d3" />
+          </property>
+          <property Id="c81035d2-f502-400e-84ca-313838fc0a80" name="Date" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9aec70f3-5d1a-43ed-aebc-74f4c7b29e9e" />
+          </property>
+          <property Id="cf880172-b83c-44a1-88bd-5a70f06eb562" name="Owner" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f7ba761f-ecc0-416d-88fc-2aa791d47e30" />
+          </property>
+          <property Id="6e06d740-ca2d-4272-b162-d88c634e880a" name="Investor" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d70b887a-9de4-4121-9a70-d8f65c86a81a" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ed2a3e14-ed3e-456a-891e-a795c065df58" name="Role" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="51175516-e155-443c-9003-c6b36a4f07cc" />
+        <targetEnds>
+          <association Id="bdf2b57d-083a-4039-bf9a-e0e3c24d230b" isDerived="false" sourceEndRoleName="Role" targetEndRoleName="RealtyInvestUser" isLeaf="false" isAbstract="false">
+            <classMoniker Id="fc16e271-4bbd-4c0a-81bc-01e515346d72" LastKnownName="RealtyInvestUser" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="294a18ea-a80d-4524-86ef-f5ea3ea170c5" name="Role" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="f3c37a80-7c9a-4e92-8c10-7ab8d46f7fe7" name="Lower" value="*">
+                      <elementDefinition Id="618a6404-d9dc-47aa-ae9c-884927a13ea9" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="867347d0-f81a-4394-a8c9-320188e06d18" name="Upper" value="*">
+                      <elementDefinition Id="55d29f85-cfa7-4990-892b-5cf4b4e99420" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="df825b86-f2f0-4b28-9812-c0a53dbd295e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1a8f7bcc-0c5b-4cdf-b232-c1560700785f" name="RealtyInvestUser" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="f719ce9c-befd-4e4d-99f4-a1c8b654b2ff" name="Lower" value="*">
+                      <elementDefinition Id="0843e3c2-583f-4f54-bc7e-fdc2e1568743" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="69937daf-7687-4f23-91aa-7823a0a864df" name="Upper" value="*">
+                      <elementDefinition Id="28f6064b-a9be-4617-a976-7a0c2e43aa3d" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="37bcff8a-368a-4b19-bdf0-1bb0b5c815e2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ad98344e-01d4-440a-8df9-c8bce1abd148" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="038e5e12-a3bc-4cd7-b103-6a5b8b5e2d8e" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4b9a514e-6eb2-40fb-8398-5d1a2b04928b" />
+          </property>
+          <property Id="77b6b123-e7fe-45d4-91d4-41cf6605c305" name="RoleName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c72e9402-1017-4728-8be5-029036a24343" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <enumeration Id="719d9996-e7fa-46b7-bc4b-28e689996ed2" name="TransactionType" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="916532b8-5aa3-416d-bcda-929860b782ab" />
+        <ownedLiterals>
+          <enumerationLiteral Id="90a47d5d-3770-490f-80f7-46eeaaad73e2" name="Buy">
+            <elementDefinition Id="589d9790-a4cb-4547-9449-e66d78aa6853" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="80f60245-5aae-4753-a748-127c41a46561" name="Sail">
+            <elementDefinition Id="80ce4a0f-afa7-4765-a4dd-36068b936cf4" />
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="167bf6a2-f3a4-40e6-9436-c486122252fe" name="IRepository" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0c426290-1a87-4bd7-b581-b8d7143adb54" />
+        <ownedOperations>
+          <operation Id="73d9d3df-6b3c-4c2d-9515-5d6875783c63" name="GetById" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="855f1adf-52e5-4556-9e70-4ea5d4d8c801" />
+          </operation>
+          <operation Id="0be86b94-3c85-4aa1-b54a-c5a43a2c5196" name="Find" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ed947791-752f-4f2f-90ca-52fa49e8b39b" />
+          </operation>
+          <operation Id="4b17d7fe-a273-4f5f-8635-9bc48aff0ce2" name="All" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="23aed100-b170-41ea-bafd-64eca1bc04f4" />
+          </operation>
+          <operation Id="87b14c92-c6c8-4ea9-875c-603801efbda1" name="All" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c7df3502-e1b6-4cf5-b255-18cd0ca11581" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f438dcd1-4c33-4a04-8f1f-8800192ffb13" name="query" direction="In" isUnique="false">
+                  <elementDefinition Id="a2fb3135-4956-4803-8259-30c8c907eb80" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="dd5c76f9-aa5e-4403-843b-0c3cc33026ac" name="Add" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b68df410-fa19-4eab-88cf-ba919358ffa6" />
+          </operation>
+          <operation Id="5410aaf7-d8e6-4f1a-9fa7-7b177b0a3a66" name="Delete" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2998f3f8-3788-4e50-9ff3-45cc56d5cc25" />
+          </operation>
+          <operation Id="798f10a9-0734-4d61-b55b-bbe83fc56708" name="Save" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="52b20a12-0249-4ba8-b173-34001776fda7" />
+          </operation>
+          <operation Id="6156931a-a327-4060-a240-da7816c605fc" name="Update" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ed840bf1-6f71-49f2-84ad-c6d690137004" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="99c6f2c9-1330-477b-92b0-d83f338d6722" name="entity" direction="In" isUnique="false">
+                  <elementDefinition Id="47c293e1-ae1d-42b0-976f-57cab9859d40" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="89d44cce-b6a1-4e26-8d88-4909e12519c4" name="IRealEstateRepository" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="211b933e-510a-4fa2-bb7e-f99e72202071" />
+        <generalsInternal>
+          <generalization Id="85f8f80a-b818-403f-8dbf-135de9daf7d6" isSubstitutable="false">
+            <interfaceMoniker Id="167bf6a2-f3a4-40e6-9436-c486122252fe" LastKnownName="IRepository" />
+            <elementDefinition Id="4061e6ad-d5bd-49df-9950-a202bc4f4499" />
+          </generalization>
+        </generalsInternal>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="09b38eac-7969-49c2-a640-c5b3d09e93fb" name="RealEstateRepository" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2ee3db12-6a8d-40c8-b3e3-af1da7c0ca27" />
+        <suppliersInternal>
+          <interfaceRealization Id="79999da2-5d52-4a21-b85a-810b95b262ea">
+            <interfaceMoniker Id="89d44cce-b6a1-4e26-8d88-4909e12519c4" LastKnownName="IRealEstateRepository" />
+            <elementDefinition Id="ca5893eb-40f4-4eea-9515-34b2138daa65" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="072e258a-8f4a-439e-9c5d-d42bcd326140" isDerived="false" sourceEndRoleName="RealEstateRepository" targetEndRoleName="IForecastService" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="9811b740-9c11-4e99-ab65-ddaedeed908e" LastKnownName="IForecastService" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1be64ebd-b9bb-41fc-a44d-d2cb8dcfe0c7" name="RealEstateRepository" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5b22a212-839b-4535-9c62-133044cb256b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8d64d941-7092-415e-824c-f675160ba194" name="IForecastService" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="749cefcd-4026-48dd-9fe4-b3eeccf7a178" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="219b6ba1-a9b7-4496-9c98-0ef20b498c0a" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="5d331017-d7ba-4fe9-877b-4a015ccbd1e2" name="GetById" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="15b857b5-7eec-4189-a977-0a003ebe4abb" />
+          </operation>
+          <operation Id="b824ec75-8d29-44aa-8245-208342623a20" name="Find" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="45eb9021-a832-4b19-acd7-482045fcce67" />
+          </operation>
+          <operation Id="d330d74d-2c6d-4de5-83d1-0c988c4f882d" name="All" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6e248891-d4a3-4d12-844a-07694781cd69" />
+          </operation>
+          <operation Id="1d484cb0-9ad4-4f5a-add9-e9e95e348420" name="All" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="720ab1eb-39a0-45f8-9bde-f4e17b107498" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a0d1972f-21d2-4c23-9e68-2e50028fe96b" name="query" direction="In" isUnique="false">
+                  <elementDefinition Id="b19f5f28-5c7c-42d0-a60b-a1ee67214ae2" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="727c1e58-ff37-4a14-a999-d9c56005d24c" name="Add" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1bf2f215-5532-4f65-8d2c-39f099184860" />
+          </operation>
+          <operation Id="628bd8f8-1640-4483-b2f1-a407ab6ef1f6" name="Delete" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8fc5cfc5-2795-4df8-bc39-0680670c6a66" />
+          </operation>
+          <operation Id="18748886-a39d-4543-91f2-396d5b8547fa" name="Save" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f0d22f76-b4d1-44f7-9f76-4c351de2d0b6" />
+          </operation>
+          <operation Id="b1cc369b-6c3f-4cb4-b50d-3ad0c17da2e9" name="Update" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d765feaf-673e-49b4-b93f-0df40d12a24b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="53ffbf8d-d661-4ab2-aac1-cc61222818c6" name="entity" direction="In" isUnique="false">
+                  <elementDefinition Id="af692d93-099c-4c36-afe3-85a124ce9468" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="199163a4-7aa3-4b85-85da-1c241d7e52d8" name="IForecastDataProvider" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4f6339fb-ff05-42cc-8fec-49137363deb9" />
+        <ownedOperations>
+          <operation Id="698c430a-1766-4d58-a424-1301f216742e" name="GetPriceHistory" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a8dc87d7-3fef-4d73-8d08-7cb3b5bd3308" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="9811b740-9c11-4e99-ab65-ddaedeed908e" name="IForecastService" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0a66df04-771e-4bbd-a0b7-02a4c205e12f" />
+        <targetEnds>
+          <association Id="30d405a3-8cea-4215-ad76-f753b1e96075" isDerived="false" sourceEndRoleName="IForecastService" targetEndRoleName="IForecastDataProvider" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="199163a4-7aa3-4b85-85da-1c241d7e52d8" LastKnownName="IForecastDataProvider" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e465d0ba-3433-4452-a238-47a58bc73118" name="IForecastService" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4bce1d58-38f2-40ac-b3d1-a390031de166" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="31c295e4-0a56-4252-afa4-82ed60982413" name="IForecastDataProvider" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="efc2b7ca-e7a5-40b6-a7e6-d8a0707467f3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9cad2a8a-17bc-4fc7-bdeb-25b3cc3c6b8a" />
+          </association>
+        </targetEnds>
+        <ownedOperations>
+          <operation Id="966e4267-36f2-46d9-b5e8-340e96f23364" name="GetLandPriceForecast" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="78ce4b7f-39fb-4c0f-b215-ee5c13be75da" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="db23be02-6c5a-4d8a-95d1-e218de15b189" name="period" direction="In" isUnique="false">
+                  <elementDefinition Id="287d2815-2327-49b2-b07d-4e4e8a689aac" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ac4931c9-2741-48ea-b0af-be62a01052c1" name="ForecastService" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="aa3677ff-7843-4685-bd03-2687ee3e2c2e" />
+        <suppliersInternal>
+          <interfaceRealization Id="b46a3211-64d6-473c-ac28-ff67854a00ad">
+            <interfaceMoniker Id="9811b740-9c11-4e99-ab65-ddaedeed908e" LastKnownName="IForecastService" />
+            <elementDefinition Id="fe841c87-523a-42fc-b0d9-3645ed0956c2" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="10a625b8-6f59-4c0f-80fc-a0dac19e68ab" name="GetLandPriceForecast" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ecbe2677-2d60-4281-adee-0788b0495bd1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8f00d429-2274-4d87-98ea-4d055f5409fc" name="period" direction="In" isUnique="false">
+                  <elementDefinition Id="bbfe92c2-c70e-4d7b-9424-1d48a2554a63" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="0ec72415-4478-4569-b653-937ca9ba3576" name="RealtyInvest.Modeling">
+    <elementDefinition Id="aeecb088-0929-4a26-8116-942525820e2f" />
+    <profileInstances>
+      <packageHasProfileInstances Id="d93e4dae-408c-4f40-ba31-39aa09700c5b">
+        <profileInstance Id="1603cf50-58a1-425d-85ec-6b1f81c77ff0" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="3e8f7f6c-2a07-48cc-868b-03f3f925d7dd">
+        <profileInstance Id="c1daf8d8-8e2a-4a88-9d07-488f8a0a51a0" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

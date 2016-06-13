@@ -33,6 +33,7 @@ namespace RealtyInvest.Web.Controllers
 
             return View(result.Value);
         }
+
         [Authorize(Roles = "Owner")]
         public ActionResult EditEstate(int id)
         {
@@ -42,6 +43,7 @@ namespace RealtyInvest.Web.Controllers
 
             return View(result.Value);
         }
+
         [Authorize(Roles = "Owner")]
         [HttpPost]
         public ActionResult EditEstate(RealtyManageViewModel model)
@@ -63,7 +65,7 @@ namespace RealtyInvest.Web.Controllers
         [HttpPost]
         public ActionResult Forecast(HistoryPeriod period)
         {
-            var result = _forecastService.GetLandPriceForecast(period);
+            var result = _forecastService.GetLandPriceForecast(period, Server.MapPath("~/Content/stat.txt"));
             if (result.ServiceStatus != Common.ServiceResult.Status.Success)
                 return null;
 

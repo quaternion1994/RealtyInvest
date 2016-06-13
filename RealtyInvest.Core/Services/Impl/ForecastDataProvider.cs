@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using RealtyInvest.DataModel.Models;
 
 namespace RealtyInvest.Core.Services.Impl
@@ -6,47 +8,25 @@ namespace RealtyInvest.Core.Services.Impl
     public class ForecastDataProvider : IForecastDataProvider
     {
         public const string Url = "";
-        public LinkedList<RawPriceHistory> GetPriceHistory()
+        public RawPriceHistory[] GetPriceHistory(string filename)
         {
             LinkedList<RawPriceHistory> list = new LinkedList<RawPriceHistory>();
-            list.AddLast(new RawPriceHistory
+            var content = File.ReadAllLines(filename);
+            foreach (var line in content)
             {
-                Fact1 = 51,
-                Fact2 = 560,
-                Fact3 = 0
-            });
-            list.AddLast(new RawPriceHistory
-            {
-                Fact1 = 53,
-                Fact2 = 632,
-                Fact3 = 1
-            });          
-            list.AddLast(new RawPriceHistory
-            {
-                Fact1 = 56,
-                Fact2 = 749,
-                Fact3 = 2
-            });
-            list.AddLast(new RawPriceHistory
-            {
-                Fact1 = 80,
-                Fact2 = 865,
-                Fact3 = 2
-            }); 
-            list.AddLast(new RawPriceHistory
-            {
-                Fact1 = 80,
-                Fact2 = 992,
-                Fact3 = 2
-            }); 
-            list.AddLast(new RawPriceHistory
-            {
-                Fact1 = 78,
-                Fact2 = 1185,
-                Fact3 = 3
-            });
+                var cells = line.Split('\t', ' ');
+                list.AddLast(new RawPriceHistory
+                {
+                    Time = double.Parse(string.IsNullOrEmpty(cells[0]) ? "0" : cells[0]),
+                    Fact1 = double.Parse(string.IsNullOrEmpty(cells[1]) ? "0" : cells[1]),
+                    Fact2 = double.Parse(string.IsNullOrEmpty(cells[2]) ? "0" : cells[2]),
+                    Fact3 = double.Parse(string.IsNullOrEmpty(cells[3]) ? "0" : cells[3]),
+                    Fact4 = double.Parse(string.IsNullOrEmpty(cells[4]) ? "0" : cells[4]),
+                    Price = double.Parse(string.IsNullOrEmpty(cells[5]) ? "0" : cells[5]),
+                });
+            }
 
-            return list;
+            return list.ToArray();
         }
     }
 }
